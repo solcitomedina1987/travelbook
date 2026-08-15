@@ -1,0 +1,1245 @@
+import { parkImages } from "./parkImages";
+
+export interface Attraction {
+  id: string;
+  name: string;
+  land: string;
+  type:
+    | "Coaster"
+    | "Dark Ride"
+    | "Simulador"
+    | "Acuática"
+    | "Show"
+    | "Interactivo"
+    | "Carrusel";
+  description: string;
+  fastPassType:
+    | "Lightning Lane Multi Pass"
+    | "Lightning Lane Single Pass"
+    | "Express Pass"
+    | "Sin Pase Rápido";
+  waitTimeMin: number;
+  durationMin: number;
+  imageUrl: string;
+  order: number;
+}
+
+export interface Park {
+  slug: string;
+  name: string;
+  company: "Disney" | "Universal";
+  heroImage: string;
+  description: string;
+  attractions: Attraction[];
+}
+
+
+export const parks: Park[] = [
+  {
+    slug: "magic-kingdom",
+    name: "Magic Kingdom",
+    company: "Disney",
+    heroImage: parkImages["mk-hero"],
+    description:
+      "El parque más icónico de Walt Disney World. Estrategia Rope Drop en Tomorrowland/Fantasyland, coasters de Frontierland al mediodía y cierre con Happily Ever After.",
+    attractions: [
+      {
+        id: "mk-tron",
+        name: "TRON Lightcycle / Run",
+        land: "Tomorrowland",
+        type: "Coaster",
+        description:
+          "Coaster lanzado a alta velocidad en lightcycles. Prioridad #1 al Rope Drop o Individual Lightning Lane.",
+        fastPassType: "Lightning Lane Single Pass",
+        waitTimeMin: 75,
+        durationMin: 2,
+        imageUrl: parkImages["mk-tron"],
+        order: 1,
+      },
+      {
+        id: "mk-space",
+        name: "Space Mountain",
+        land: "Tomorrowland",
+        type: "Coaster",
+        description:
+          "Montaña rusa en la oscuridad clásica de Tomorrowland. Ideal justo después de TRON.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 55,
+        durationMin: 3,
+        imageUrl: parkImages["mk-space"],
+        order: 2,
+      },
+      {
+        id: "mk-mine",
+        name: "Seven Dwarfs Mine Train",
+        land: "Fantasyland",
+        type: "Coaster",
+        description:
+          "Coaster familiar por la mina de los enanitos. Alta demanda: Single Pass o Rope Drop temprano.",
+        fastPassType: "Lightning Lane Single Pass",
+        waitTimeMin: 70,
+        durationMin: 3,
+        imageUrl: parkImages["mk-mine"],
+        order: 3,
+      },
+      {
+        id: "mk-peter",
+        name: "Peter Pan's Flight",
+        land: "Fantasyland",
+        type: "Dark Ride",
+        description:
+          "Vuelo sobre Londres y Neverland. Filas largas todo el día: Multi Pass recomendado.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 60,
+        durationMin: 3,
+        imageUrl: parkImages["mk-peter"],
+        order: 4,
+      },
+      {
+        id: "mk-thunder",
+        name: "Big Thunder Mountain Railroad",
+        land: "Frontierland",
+        type: "Coaster",
+        description:
+          "Wild west coaster con curvas y caídas suaves. Mejor a media mañana o con Multi Pass.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 45,
+        durationMin: 4,
+        imageUrl: parkImages["mk-thunder"],
+        order: 5,
+      },
+      {
+        id: "mk-tiana",
+        name: "Tiana's Bayou Adventure",
+        land: "Frontierland",
+        type: "Acuática",
+        description:
+          "Log flume musical de Tiana. Combina bien con Big Thunder en el mismo sector.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 50,
+        durationMin: 10,
+        imageUrl: parkImages["mk-tiana"],
+        order: 6,
+      },
+      {
+        id: "mk-pirates",
+        name: "Pirates of the Caribbean",
+        land: "Adventureland",
+        type: "Dark Ride",
+        description:
+          "Clásico dark ride acuático con audio-animatrónicos. Buena opción de mediodía.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 35,
+        durationMin: 9,
+        imageUrl: parkImages["mk-pirates"],
+        order: 7,
+      },
+      {
+        id: "mk-jungle",
+        name: "Jungle Cruise",
+        land: "Adventureland",
+        type: "Acuática",
+        description:
+          "Crucero cómico por la jungla. Standby suele ser manejable fuera de peak.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 40,
+        durationMin: 10,
+        imageUrl: parkImages["mk-jungle"],
+        order: 8,
+      },
+      {
+        id: "mk-haunted",
+        name: "Haunted Mansion",
+        land: "Liberty Square",
+        type: "Dark Ride",
+        description:
+          "Mansión encantada con stretch room y 999 fantasmas. Excelente a la tarde.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 40,
+        durationMin: 8,
+        imageUrl: parkImages["mk-haunted"],
+        order: 9,
+      },
+      {
+        id: "mk-buzz",
+        name: "Buzz Lightyear's Space Ranger Spin",
+        land: "Tomorrowland",
+        type: "Interactivo",
+        description:
+          "Shooter interactivo con puntuación. Ideal para familias entre coasters.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 30,
+        durationMin: 5,
+        imageUrl: parkImages["mk-buzz"],
+        order: 10,
+      },
+      {
+        id: "mk-carousel",
+        name: "Prince Charming Regal Carrousel",
+        land: "Fantasyland",
+        type: "Carrusel",
+        description:
+          "Carrusel clásico frente al castillo. Casi siempre walk-on; buen descanso.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 10,
+        durationMin: 2,
+        imageUrl: parkImages["mk-carousel"],
+        order: 11,
+      },
+      {
+        id: "mk-little-mermaid",
+        name: "Under the Sea – Journey of The Little Mermaid",
+        land: "Fantasyland",
+        type: "Dark Ride",
+        description:
+          "Dark ride de Ariel con canciones. Buena atracción de baja espera.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 25,
+        durationMin: 7,
+        imageUrl: parkImages["mk-little-mermaid"],
+        order: 12,
+      },
+      {
+        id: "mk-peoplemover",
+        name: "Tomorrowland Transit Authority PeopleMover",
+        land: "Tomorrowland",
+        type: "Dark Ride",
+        description:
+          "Tour elevado por Tomorrowland. Casi sin fila; perfecto para recuperar energía.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 5,
+        durationMin: 10,
+        imageUrl: parkImages["mk-peoplemover"],
+        order: 13,
+      },
+      {
+        id: "mk-festival",
+        name: "Festival of Fantasy Parade",
+        land: "Main Street, U.S.A.",
+        type: "Show",
+        description:
+          "Desfile diurno con floats de fantasía. Reservá sombra en Main Street o Frontierland.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 15,
+        imageUrl: parkImages["mk-festival"],
+        order: 14,
+      },
+      {
+        id: "mk-hea",
+        name: "Happily Ever After",
+        land: "Main Street, U.S.A. / Cinderella Castle",
+        type: "Show",
+        description:
+          "Show nocturno de fuegos y proyecciones en el castillo. Cierre estratégico del día.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 18,
+        imageUrl: parkImages["mk-hea"],
+        order: 15,
+      },
+    ],
+  },
+  {
+    slug: "epcot",
+    name: "EPCOT",
+    company: "Disney",
+    heroImage: parkImages["ep-hero"],
+    description:
+      "Ciencia, culturas y gastronomía. Rope Drop en Guardians/Remy, World Showcase a la tarde y cierre con Harmonious o espectáculo nocturno vigente.",
+    attractions: [
+      {
+        id: "ep-guardians",
+        name: "Guardians of the Galaxy: Cosmic Rewind",
+        land: "World Discovery",
+        type: "Coaster",
+        description:
+          "Coaster indoor spinning de alta demanda. Individual Lightning Lane o Early Entry.",
+        fastPassType: "Lightning Lane Single Pass",
+        waitTimeMin: 80,
+        durationMin: 4,
+        imageUrl: parkImages["ep-guardians"],
+        order: 1,
+      },
+      {
+        id: "ep-remy",
+        name: "Remy's Ratatouille Adventure",
+        land: "World Showcase · France",
+        type: "Dark Ride",
+        description:
+          "Trackless dark ride en perspectiva de rata. Alta fila: priorizar mañana o LL.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 65,
+        durationMin: 5,
+        imageUrl: parkImages["ep-remy"],
+        order: 2,
+      },
+      {
+        id: "ep-frozen",
+        name: "Frozen Ever After",
+        land: "World Showcase · Norway",
+        type: "Acuática",
+        description:
+          "Boat ride de Frozen. Suele generar cola larga desde el mediodía.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 55,
+        durationMin: 5,
+        imageUrl: parkImages["ep-frozen"],
+        order: 3,
+      },
+      {
+        id: "ep-soarin",
+        name: "Soarin' Around the World",
+        land: "World Nature",
+        type: "Simulador",
+        description:
+          "Simulador de vuelo con aroma y vistas. Clásico EPCOT de media mañana.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 45,
+        durationMin: 5,
+        imageUrl: parkImages["ep-soarin"],
+        order: 4,
+      },
+      {
+        id: "ep-test",
+        name: "Test Track",
+        land: "World Discovery",
+        type: "Simulador",
+        description:
+          "Diseñá un vehículo y probalo a alta velocidad. Buen Multi Pass candidate.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 50,
+        durationMin: 5,
+        imageUrl: parkImages["ep-test"],
+        order: 5,
+      },
+      {
+        id: "ep-mission",
+        name: "Mission: SPACE",
+        land: "World Discovery",
+        type: "Simulador",
+        description:
+          "Simulador de entrenamiento espacial (Green/Orange). Intensidad variable.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 30,
+        durationMin: 6,
+        imageUrl: parkImages["ep-mission"],
+        order: 6,
+      },
+      {
+        id: "ep-living",
+        name: "Living with the Land",
+        land: "World Nature",
+        type: "Acuática",
+        description:
+          "Boat tour por invernaderos e innovación agrícola. Baja espera, muy educativo.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 15,
+        durationMin: 14,
+        imageUrl: parkImages["ep-living"],
+        order: 7,
+      },
+      {
+        id: "ep-seas",
+        name: "The Seas with Nemo & Friends",
+        land: "World Nature",
+        type: "Dark Ride",
+        description:
+          "Dark ride suave hacia el acuario. Ideal para familias y shade break.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 20,
+        durationMin: 5,
+        imageUrl: parkImages["ep-seas"],
+        order: 8,
+      },
+      {
+        id: "ep-spaceship",
+        name: "Spaceship Earth",
+        land: "World Celebration",
+        type: "Dark Ride",
+        description:
+          "Viaje por la historia de la comunicación bajo la esfera icónica.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 25,
+        durationMin: 15,
+        imageUrl: parkImages["ep-spaceship"],
+        order: 9,
+      },
+      {
+        id: "ep-mexico",
+        name: "Gran Fiesta Tour Starring The Three Caballeros",
+        land: "World Showcase · Mexico",
+        type: "Acuática",
+        description:
+          "Boat ride festivo dentro de la pirámide. Walk-on frecuente.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 15,
+        durationMin: 8,
+        imageUrl: parkImages["ep-mexico"],
+        order: 10,
+      },
+      {
+        id: "ep-canada",
+        name: "Canada Far and Wide / Reflections of China",
+        land: "World Showcase",
+        type: "Show",
+        description:
+          "Cortos Circle-Vision / film en pabellones. Descanso con aire acondicionado.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 5,
+        durationMin: 14,
+        imageUrl: parkImages["ep-canada"],
+        order: 11,
+      },
+      {
+        id: "ep-night",
+        name: "Luminous / Espectáculo Nocturno EPCOT",
+        land: "World Showcase Lagoon",
+        type: "Show",
+        description:
+          "Show nocturno sobre la laguna. Ubicación recomendada: Italia–Alemania o UK.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 20,
+        imageUrl: parkImages["ep-night"],
+        order: 12,
+      },
+    ],
+  },
+  {
+    slug: "hollywood-studios",
+    name: "Hollywood Studios",
+    company: "Disney",
+    heroImage: parkImages["hs-hero"],
+    description:
+      "Star Wars, Pixar y cine. Rope Drop en Rise / Slinky, Tower y Rock 'n' Roller al mediodía, Fantasmic! de noche.",
+    attractions: [
+      {
+        id: "hs-rise",
+        name: "Star Wars: Rise of the Resistance",
+        land: "Galaxy's Edge",
+        type: "Dark Ride",
+        description:
+          "Experiencia multipase inmersiva. Individual LL o Virtual Queue / Rope Drop.",
+        fastPassType: "Lightning Lane Single Pass",
+        waitTimeMin: 90,
+        durationMin: 18,
+        imageUrl: parkImages["hs-rise"],
+        order: 1,
+      },
+      {
+        id: "hs-smugglers",
+        name: "Millennium Falcon: Smugglers Run",
+        land: "Galaxy's Edge",
+        type: "Simulador",
+        description:
+          "Pilotá el Falcon en equipo. Combinar con Rise en la misma land.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 45,
+        durationMin: 5,
+        imageUrl: parkImages["hs-smugglers"],
+        order: 2,
+      },
+      {
+        id: "hs-slinky",
+        name: "Slinky Dog Dash",
+        land: "Toy Story Land",
+        type: "Coaster",
+        description:
+          "Family coaster muy popular. Prioridad Multi Pass o Early Entry.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 70,
+        durationMin: 2,
+        imageUrl: parkImages["hs-slinky"],
+        order: 3,
+      },
+      {
+        id: "hs-alien",
+        name: "Alien Swirling Saucers",
+        land: "Toy Story Land",
+        type: "Interactivo",
+        description:
+          "Tea cups estilo Toy Story. Buen filler mientras baja Slinky.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 35,
+        durationMin: 2,
+        imageUrl: parkImages["hs-alien"],
+        order: 4,
+      },
+      {
+        id: "hs-manytours",
+        name: "Toy Story Mania!",
+        land: "Toy Story Land",
+        type: "Interactivo",
+        description:
+          "Shooter 3D cooperativo. Alta re-rideabilidad y Multi Pass útil.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 40,
+        durationMin: 5,
+        imageUrl: parkImages["hs-manytours"],
+        order: 5,
+      },
+      {
+        id: "hs-tower",
+        name: "The Twilight Zone Tower of Terror",
+        land: "Sunset Boulevard",
+        type: "Simulador",
+        description:
+          "Drop tower temático. Mejor a media mañana o con Multi Pass.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 50,
+        durationMin: 5,
+        imageUrl: parkImages["hs-tower"],
+        order: 6,
+      },
+      {
+        id: "hs-rockn",
+        name: "Rock 'n' Roller Coaster Starring Aerosmith",
+        land: "Sunset Boulevard",
+        type: "Coaster",
+        description:
+          "Launch coaster indoor con loops. Emparejar con Tower en Sunset.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 55,
+        durationMin: 2,
+        imageUrl: parkImages["hs-rockn"],
+        order: 7,
+      },
+      {
+        id: "hs-mickey",
+        name: "Mickey & Minnie's Runaway Railway",
+        land: "Hollywood Boulevard",
+        type: "Dark Ride",
+        description:
+          "Trackless cartoon ride. Excelente atracción familiar de tarde.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 40,
+        durationMin: 5,
+        imageUrl: parkImages["hs-mickey"],
+        order: 8,
+      },
+      {
+        id: "hs-tofystory",
+        name: "Mickey's Toontown / Animation Courtyard Meetups",
+        land: "Animation Courtyard",
+        type: "Interactivo",
+        description:
+          "Encuentros con personajes y zona foto. Sin pase; flexible.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 20,
+        durationMin: 15,
+        imageUrl: parkImages["hs-tofystory"],
+        order: 9,
+      },
+      {
+        id: "hs-indy",
+        name: "Indiana Jones Epic Stunt Spectacular",
+        land: "Echo Lake",
+        type: "Show",
+        description:
+          "Show de stunts al aire libre. Ideal descanso con asiento.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 30,
+        imageUrl: parkImages["hs-indy"],
+        order: 10,
+      },
+      {
+        id: "hs-fantasmic",
+        name: "Fantasmic!",
+        land: "Sunset Boulevard · Hollywood Hills Amphitheater",
+        type: "Show",
+        description:
+          "Show nocturno de agua, fuego y proyecciones. Llegá 45–60 min antes.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 30,
+        imageUrl: parkImages["hs-fantasmic"],
+        order: 11,
+      },
+    ],
+  },
+  {
+    slug: "animal-kingdom",
+    name: "Animal Kingdom",
+    company: "Disney",
+    heroImage: parkImages["ak-hero"],
+    description:
+      "Naturaleza y aventura. Flight of Passage al Rope Drop, safari a la mañana, Everest al mediodía y Tree of Life de noche.",
+    attractions: [
+      {
+        id: "ak-avatar",
+        name: "Avatar Flight of Passage",
+        land: "Pandora – The World of Avatar",
+        type: "Simulador",
+        description:
+          "Simulador de vuelo sobre banshee. Máxima prioridad Rope Drop o Single Pass.",
+        fastPassType: "Lightning Lane Single Pass",
+        waitTimeMin: 85,
+        durationMin: 5,
+        imageUrl: parkImages["ak-avatar"],
+        order: 1,
+      },
+      {
+        id: "ak-navi",
+        name: "Na'vi River Journey",
+        land: "Pandora – The World of Avatar",
+        type: "Acuática",
+        description:
+          "Boat ride bioluminiscente. Combinar con Flight en Pandora.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 50,
+        durationMin: 5,
+        imageUrl: parkImages["ak-navi"],
+        order: 2,
+      },
+      {
+        id: "ak-safari",
+        name: "Kilimanjaro Safaris",
+        land: "Africa",
+        type: "Interactivo",
+        description:
+          "Safari en vehículo abierto. Mejor temprano por actividad animal.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 40,
+        durationMin: 20,
+        imageUrl: parkImages["ak-safari"],
+        order: 3,
+      },
+      {
+        id: "ak-everest",
+        name: "Expedition Everest",
+        land: "Asia",
+        type: "Coaster",
+        description:
+          "Coaster hacia atrás con yeti. Prioridad Multi Pass a media mañana.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 45,
+        durationMin: 3,
+        imageUrl: parkImages["ak-everest"],
+        order: 4,
+      },
+      {
+        id: "ak-kali",
+        name: "Kali River Rapids",
+        land: "Asia",
+        type: "Acuática",
+        description:
+          "Rafting que moja. Ideal al mediodía/calor; guardá electrónicos.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 35,
+        durationMin: 5,
+        imageUrl: parkImages["ak-kali"],
+        order: 5,
+      },
+      {
+        id: "ak-dinosaurs",
+        name: "DINOSAUR",
+        land: "DinoLand U.S.A.",
+        type: "Dark Ride",
+        description:
+          "Dark ride intenso al Cretácico. Buena opción de tarde.",
+        fastPassType: "Lightning Lane Multi Pass",
+        waitTimeMin: 30,
+        durationMin: 4,
+        imageUrl: parkImages["ak-dinosaurs"],
+        order: 6,
+      },
+      {
+        id: "ak-triceratop",
+        name: "TriceraTop Spin",
+        land: "DinoLand U.S.A.",
+        type: "Carrusel",
+        description:
+          "Atracción giratoria familiar. Walk-on habitual.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 10,
+        durationMin: 2,
+        imageUrl: parkImages["ak-triceratop"],
+        order: 7,
+      },
+      {
+        id: "ak-gorillas",
+        name: "Gorilla Falls Exploration Trail",
+        land: "Africa",
+        type: "Interactivo",
+        description:
+          "Sendero a pie con gorilas e hipopótamos. Sin fila formal.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 25,
+        imageUrl: parkImages["ak-gorillas"],
+        order: 8,
+      },
+      {
+        id: "ak-maharajah",
+        name: "Maharajah Jungle Trek",
+        land: "Asia",
+        type: "Interactivo",
+        description:
+          "Trek con tigres y aves. Combinar con Everest/Kali.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 20,
+        imageUrl: parkImages["ak-maharajah"],
+        order: 9,
+      },
+      {
+        id: "ak-festival",
+        name: "Festival of the Lion King",
+        land: "Africa",
+        type: "Show",
+        description:
+          "Show teatral con música y acrobacias. Reservá asiento con anticipación.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 30,
+        imageUrl: parkImages["ak-festival"],
+        order: 10,
+      },
+      {
+        id: "ak-feathered",
+        name: "Feathered Friends in Flight / Finding Nemo show",
+        land: "Asia / DinoLand",
+        type: "Show",
+        description:
+          "Shows diurnos con asiento y sombra. Ideal para recuperar piernas.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 25,
+        imageUrl: parkImages["ak-feathered"],
+        order: 11,
+      },
+      {
+        id: "ak-tree",
+        name: "Tree of Life Awakenings",
+        land: "Discovery Island",
+        type: "Show",
+        description:
+          "Proyecciones nocturnas en el Tree of Life. Cierre atmosférico del parque.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 10,
+        imageUrl: parkImages["ak-tree"],
+        order: 12,
+      },
+    ],
+  },
+  {
+    slug: "universal-studios",
+    name: "Universal Studios Florida",
+    company: "Universal",
+    heroImage: parkImages["us-hero"],
+    description:
+      "Cine, Harry Potter (Diagon Alley) y thrills. Rope Drop en Gringotts, Express en Transformers/Mummy/Minions y cierre atmosférico en Diagon Alley / CityWalk.",
+    attractions: [
+      {
+        id: "us-forbidden",
+        name: "Harry Potter and the Escape from Gringotts",
+        land: "Diagon Alley",
+        type: "Coaster",
+        description:
+          "Coaster 3D indoor en Gringotts. Prioridad Rope Drop o Express.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 60,
+        durationMin: 5,
+        imageUrl: parkImages["us-forbidden"],
+        order: 1,
+      },
+      {
+        id: "us-hogwarts-express",
+        name: "Hogwarts Express – King's Cross Station",
+        land: "Diagon Alley / Hogsmeade",
+        type: "Simulador",
+        description:
+          "Tren entre Diagon Alley e Islands. Park-to-Park ticket requerido.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 35,
+        durationMin: 5,
+        imageUrl: parkImages["us-hogwarts-express"],
+        order: 2,
+      },
+      {
+        id: "us-mummy",
+        name: "Revenge of the Mummy",
+        land: "New York",
+        type: "Coaster",
+        description:
+          "Coaster indoor con fuego y efectos. Express muy efectivo.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 40,
+        durationMin: 3,
+        imageUrl: parkImages["us-mummy"],
+        order: 3,
+      },
+      {
+        id: "us-transformers",
+        name: "Transformers: The Ride-3D",
+        land: "Marvel / Transformers",
+        type: "Simulador",
+        description:
+          "Simulador 3D intenso estilo Battle for Cybertron.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 45,
+        durationMin: 5,
+        imageUrl: parkImages["us-transformers"],
+        order: 4,
+      },
+      {
+        id: "us-minions",
+        name: "Despicable Me Minion Mayhem",
+        land: "Minion Land",
+        type: "Simulador",
+        description:
+          "Simulador familiar con Minions. Buena atracción de mediodía.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 40,
+        durationMin: 5,
+        imageUrl: parkImages["us-minions"],
+        order: 5,
+      },
+      {
+        id: "us-villain",
+        name: "Villain-Con Minion Blast",
+        land: "Minion Land",
+        type: "Interactivo",
+        description:
+          "Dark ride shooter con Minions. Express recomendado en peak.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 50,
+        durationMin: 5,
+        imageUrl: parkImages["us-villain"],
+        order: 6,
+      },
+      {
+        id: "us-men",
+        name: "Men in Black Alien Attack",
+        land: "World Expo",
+        type: "Interactivo",
+        description:
+          "Shooter de aliens con puntuación. Standby suele moverse bien.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 30,
+        durationMin: 5,
+        imageUrl: parkImages["us-men"],
+        order: 7,
+      },
+      {
+        id: "us-jimmy",
+        name: "Race Through New York Starring Jimmy Fallon",
+        land: "New York",
+        type: "Simulador",
+        description:
+          "Simulador cómico por NYC. Buen filler con aire acondicionado.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 25,
+        durationMin: 5,
+        imageUrl: parkImages["us-jimmy"],
+        order: 8,
+      },
+      {
+        id: "us-et",
+        name: "E.T. Adventure",
+        land: "Woody Woodpecker's KidZone",
+        type: "Dark Ride",
+        description:
+          "Clásico dark ride de E.T. Nostálgico y de baja intensidad.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 20,
+        durationMin: 5,
+        imageUrl: parkImages["us-et"],
+        order: 9,
+      },
+      {
+        id: "us-horror",
+        name: "Universal Horror Unleashed / Horror Make-Up Show",
+        land: "Production Central",
+        type: "Show",
+        description:
+          "Show de efectos de maquillaje y terror. Ideal descanso con asiento.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 25,
+        imageUrl: parkImages["us-horror"],
+        order: 10,
+      },
+      {
+        id: "us-bournes",
+        name: "The Bourne Stuntacular",
+        land: "Production Central",
+        type: "Show",
+        description:
+          "Show de stunts con pantalla y acción en vivo. No te lo saltees.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 15,
+        durationMin: 25,
+        imageUrl: parkImages["us-bournes"],
+        order: 11,
+      },
+      {
+        id: "us-night",
+        name: "Cierre · Diagon Alley Atmosphere / CityWalk",
+        land: "Diagon Alley / CityWalk",
+        type: "Show",
+        description:
+          "Recorrido nocturno por Diagon Alley y cierre en CityWalk.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 45,
+        imageUrl: parkImages["us-night"],
+        order: 12,
+      },
+    ],
+  },
+  {
+    slug: "islands-of-adventure",
+    name: "Islands of Adventure",
+    company: "Universal",
+    heroImage: parkImages["ioa-hero"],
+    description:
+      "Hogsmeade, Marvel y coasters extremos. Rope Drop Hagrid's/VelociCoaster, Forbidden Journey, Marvel al mediodía y Hogsmeade de noche.",
+    attractions: [
+      {
+        id: "ioa-hagrid",
+        name: "Hagrid's Magical Creatures Motorbike Adventure",
+        land: "Hogsmeade",
+        type: "Coaster",
+        description:
+          "Story coaster con launches. Máxima prioridad Rope Drop o Express.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 90,
+        durationMin: 3,
+        imageUrl: parkImages["ioa-hagrid"],
+        order: 1,
+      },
+      {
+        id: "ioa-veloci",
+        name: "VelociCoaster",
+        land: "Jurassic World / Isla Nublar",
+        type: "Coaster",
+        description:
+          "Launch coaster de alto thrill. Rope Drop si no hay Express.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 75,
+        durationMin: 2,
+        imageUrl: parkImages["ioa-veloci"],
+        order: 2,
+      },
+      {
+        id: "ioa-forbidden",
+        name: "Harry Potter and the Forbidden Journey",
+        land: "Hogsmeade",
+        type: "Simulador",
+        description:
+          "Dark ride/simulador por el castillo de Hogwarts. Express útil.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 55,
+        durationMin: 5,
+        imageUrl: parkImages["ioa-forbidden"],
+        order: 3,
+      },
+      {
+        id: "ioa-hippogriff",
+        name: "Flight of the Hippogriff",
+        land: "Hogsmeade",
+        type: "Coaster",
+        description:
+          "Family coaster corto. Buen filler en Hogsmeade.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 30,
+        durationMin: 1,
+        imageUrl: parkImages["ioa-hippogriff"],
+        order: 4,
+      },
+      {
+        id: "ioa-hulk",
+        name: "The Incredible Hulk Coaster",
+        land: "Marvel Super Hero Island",
+        type: "Coaster",
+        description:
+          "Launch coaster con loops. Prioridad Express en peak hours.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 50,
+        durationMin: 2,
+        imageUrl: parkImages["ioa-hulk"],
+        order: 5,
+      },
+      {
+        id: "ioa-spiderman",
+        name: "The Amazing Adventures of Spider-Man",
+        land: "Marvel Super Hero Island",
+        type: "Simulador",
+        description:
+          "Simulador 3D referente de la industria. No te lo pierdas.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 45,
+        durationMin: 5,
+        imageUrl: parkImages["ioa-spiderman"],
+        order: 6,
+      },
+      {
+        id: "ioa-doom",
+        name: "Doctor Doom's Fearfall",
+        land: "Marvel Super Hero Island",
+        type: "Simulador",
+        description:
+          "Drop tower de Marvel. Combinar con Hulk y Spidey.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 35,
+        durationMin: 1,
+        imageUrl: parkImages["ioa-doom"],
+        order: 7,
+      },
+      {
+        id: "ioa-jurassic",
+        name: "Jurassic World River Adventure",
+        land: "Jurassic Park / Isla Nublar",
+        type: "Acuática",
+        description:
+          "River ride con drop final. Te moja; ideal con calor.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 40,
+        durationMin: 6,
+        imageUrl: parkImages["ioa-jurassic"],
+        order: 8,
+      },
+      {
+        id: "ioa-popeye",
+        name: "Popeye & Bluto's Bilge-Rat Barges",
+        land: "Toon Lagoon",
+        type: "Acuática",
+        description:
+          "Rafting que empapa. Guardá dry bag.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 30,
+        durationMin: 5,
+        imageUrl: parkImages["ioa-popeye"],
+        order: 9,
+      },
+      {
+        id: "ioa-cat",
+        name: "The Cat in the Hat",
+        land: "Seuss Landing",
+        type: "Dark Ride",
+        description:
+          "Dark ride familiar de Seuss. Baja intensidad, buen descanso.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 20,
+        durationMin: 4,
+        imageUrl: parkImages["ioa-cat"],
+        order: 10,
+      },
+      {
+        id: "ioa-mythos-show",
+        name: "Poseidon's Fury (o show vigente de Lost Continent)",
+        land: "The Lost Continent",
+        type: "Show",
+        description:
+          "Show indoor de efectos. Verificá cartelera 2027; útil para sombra.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 20,
+        imageUrl: parkImages["ioa-mythos-show"],
+        order: 11,
+      },
+      {
+        id: "ioa-night",
+        name: "Hogsmeade Night Atmosphere",
+        land: "Hogsmeade",
+        type: "Show",
+        description:
+          "Paseo nocturno por Hogsmeade y el castillo iluminado. Cierre mágico.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 40,
+        imageUrl: parkImages["ioa-night"],
+        order: 12,
+      },
+    ],
+  },
+  {
+    slug: "epic-universe",
+    name: "Epic Universe",
+    company: "Universal",
+    heroImage: parkImages["eu-hero"],
+    description:
+      "El nuevo parque de Universal Orlando. Universos temáticos (Nintendo, How to Train Your Dragon, Harry Potter Ministry, Dark Universe y Celestial Park). Estrategia Rope Drop en atracciones headliner y Express donde aplique.",
+    attractions: [
+      {
+        id: "eu-mario-kart",
+        name: "Mario Kart: Bowser's Challenge",
+        land: "Super Nintendo World",
+        type: "Simulador",
+        description:
+          "Dark ride AR de Mario Kart. Headliner: Rope Drop o Express.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 80,
+        durationMin: 5,
+        imageUrl: parkImages["eu-mario-kart"],
+        order: 1,
+      },
+      {
+        id: "eu-yoshi",
+        name: "Yoshi's Adventure",
+        land: "Super Nintendo World",
+        type: "Dark Ride",
+        description:
+          "Omnimover familiar por el reino de Yoshi. Ideal post Mario Kart.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 40,
+        durationMin: 5,
+        imageUrl: parkImages["eu-yoshi"],
+        order: 2,
+      },
+      {
+        id: "eu-mine-cart",
+        name: "Mine-Cart Madness",
+        land: "Super Nintendo World",
+        type: "Coaster",
+        description:
+          "Family coaster con efecto de rieles flotantes. Alta demanda.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 55,
+        durationMin: 2,
+        imageUrl: parkImages["eu-mine-cart"],
+        order: 3,
+      },
+      {
+        id: "eu-stardust",
+        name: "Stardust Racers",
+        land: "Celestial Park",
+        type: "Coaster",
+        description:
+          "Dueling launch coaster del hub central. Prioridad Express.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 70,
+        durationMin: 3,
+        imageUrl: parkImages["eu-stardust"],
+        order: 4,
+      },
+      {
+        id: "eu-ministry",
+        name: "Harry Potter and the Battle at the Ministry",
+        land: "The Wizarding World · Ministry of Magic",
+        type: "Dark Ride",
+        description:
+          "Nueva experiencia Harry Potter en el Ministerio. Headliner del land.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 75,
+        durationMin: 8,
+        imageUrl: parkImages["eu-ministry"],
+        order: 5,
+      },
+      {
+        id: "eu-hiccup",
+        name: "Hiccup's Wing Gliders",
+        land: "How to Train Your Dragon – Isle of Berk",
+        type: "Coaster",
+        description:
+          "Family launch coaster inspirado en dragones. Buena prioridad media mañana.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 45,
+        durationMin: 2,
+        imageUrl: parkImages["eu-hiccup"],
+        order: 6,
+      },
+      {
+        id: "eu-dragon",
+        name: "Dragon Racer's Rally",
+        land: "How to Train Your Dragon – Isle of Berk",
+        type: "Interactivo",
+        description:
+          "Atracción giratoria de dragones. Familiar y fotogénica.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 30,
+        durationMin: 2,
+        imageUrl: parkImages["eu-dragon"],
+        order: 7,
+      },
+      {
+        id: "eu-monsters",
+        name: "Monsters Unchained: The Frankenstein Experiment",
+        land: "Dark Universe",
+        type: "Dark Ride",
+        description:
+          "Dark ride de monstruos clásicos Universal. Alta prioridad temática.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 50,
+        durationMin: 6,
+        imageUrl: parkImages["eu-monsters"],
+        order: 8,
+      },
+      {
+        id: "eu-curse",
+        name: "Curse of the Werewolf",
+        land: "Dark Universe",
+        type: "Coaster",
+        description:
+          "Spinning coaster en Dark Universe. Combinar con Monsters Unchained.",
+        fastPassType: "Express Pass",
+        waitTimeMin: 40,
+        durationMin: 2,
+        imageUrl: parkImages["eu-curse"],
+        order: 9,
+      },
+      {
+        id: "eu-constellation",
+        name: "Constellation Carousel",
+        land: "Celestial Park",
+        type: "Carrusel",
+        description:
+          "Carrusel celestial del hub. Walk-on frecuente; buen descanso.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 10,
+        durationMin: 3,
+        imageUrl: parkImages["eu-constellation"],
+        order: 10,
+      },
+      {
+        id: "eu-berk-show",
+        name: "The Untrainable Dragon (Show)",
+        land: "How to Train Your Dragon – Isle of Berk",
+        type: "Show",
+        description:
+          "Show en vivo con dragones y acrobacias. Reservá asiento a la tarde.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 25,
+        imageUrl: parkImages["eu-berk-show"],
+        order: 11,
+      },
+      {
+        id: "eu-night",
+        name: "Celestial Park Nighttime Spectacular",
+        land: "Celestial Park",
+        type: "Show",
+        description:
+          "Espectáculo nocturno del hub. Cierre estratégico del día en Epic Universe.",
+        fastPassType: "Sin Pase Rápido",
+        waitTimeMin: 0,
+        durationMin: 20,
+        imageUrl: parkImages["eu-night"],
+        order: 12,
+      },
+    ],
+  },
+];
+
+export function getParkBySlug(slug: string): Park | undefined {
+  return parks.find((p) => p.slug === slug);
+}
+
+export function getParksByCompany(company: Park["company"]): Park[] {
+  return parks.filter((p) => p.company === company);
+}
+
+export function getAllParkSlugs(): string[] {
+  return parks.map((p) => p.slug);
+}
+
+export function getStrategyBadge(order: number, total: number): string {
+  if (order <= 3) return "Ideal para Rope Drop / Apertura";
+  if (order >= total - 1) return "Show de Cierre";
+  if (order >= Math.ceil(total * 0.65)) return "Prioridad Tarde";
+  return "Secuencia Mediodía";
+}
