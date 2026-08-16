@@ -157,7 +157,7 @@ export const nycDays: NycDay[] = [
         lng: -73.9855,
         imageUrl: u("photo-1534430480872-3498386e7856"),
         walkFromPrev: "🚶 8 min a pie (600 m)",
-        tip: "Cierre del día con las luces. Evitá restaurantes del cruce principal.",
+        tip: "Cierre del día con las luces. Evitá restaurantes del cruce principal. Visitar cerca: Radio City Music Hall, M&M world, Toys 'R' Us, Central Perk, etc",
         note: "Noche",
       },
     ],
