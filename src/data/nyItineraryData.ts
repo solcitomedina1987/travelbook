@@ -39,6 +39,36 @@ export type NycDay = {
 const u = (id: string, w = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
+/** Stable Wikimedia Commons thumbs (verified 200) */
+const wiki = {
+  grandCentral:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Grand_Central_Terminal_Main_Concourse_2019-10-03_20-02.jpg/1280px-Grand_Central_Terminal_Main_Concourse_2019-10-03_20-02.jpg",
+  highLine:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/High_Line_New_York_August_2013.jpg/1280px-High_Line_New_York_August_2013.jpg",
+  bowBridge:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bow_Bridge_over_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg/1280px-Bow_Bridge_over_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg",
+  belvedere:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Belvedere_Castle%2C_Central_Park.jpg/1280px-Belvedere_Castle%2C_Central_Park.jpg",
+  freeTour:
+    "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=1200&q=80",
+  memorial911:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/North_reflecting_pool_of_the_National_September_11_Memorial%2C_New_York_City.jpg/1280px-North_reflecting_pool_of_the_National_September_11_Memorial%2C_New_York_City.jpg",
+  batteryPark:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Battery_Park_from_New_York_Harbor_01_%289441158603%29.jpg/1280px-Battery_Park_from_New_York_Harbor_01_%289441158603%29.jpg",
+  statueOfLiberty:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Lady_Liberty_under_a_blue_sky_%28cropped%29.jpg/1280px-Lady_Liberty_under_a_blue_sky_%28cropped%29.jpg",
+  dumboWashington:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Manhattan_Bridge_and_Empire_State_Building_from_Washington_Street%2C_Dumbo%2C_Brooklyn%2C_New_York.jpg/1280px-Manhattan_Bridge_and_Empire_State_Building_from_Washington_Street%2C_Dumbo%2C_Brooklyn%2C_New_York.jpg",
+  brooklynBridge:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Brooklyn_Bridge_as_viewed_from_pedestrian_walkway.jpg/1280px-Brooklyn_Bridge_as_viewed_from_pedestrian_walkway.jpg",
+  brooklynHeights:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Brooklyn_Heights_Promenade_December_2021.jpg/1280px-Brooklyn_Heights_Promenade_December_2021.jpg",
+  janesCarousel:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Jane%27s_Carousel_2019_%28Manhattan_Bridge_in_background%29.jpg/1280px-Jane%27s_Carousel_2019_%28Manhattan_Bridge_in_background%29.jpg",
+  wallStreet:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wall_Street_-_New_York_Stock_Exchange.jpg/1280px-Wall_Street_-_New_York_Stock_Exchange.jpg",
+} as const;
+
 /** One distinct color per itinerary day (Mapa General) */
 export const nycDayColors: Record<string, string> = {
   "day-1": "#0284C7", // sky — Midtown Central
@@ -68,7 +98,7 @@ export const nycDays: NycDay[] = [
         time: "14:30",
         lat: 40.7527,
         lng: -73.9772,
-        imageUrl: u("photo-1485871981521-5b1fd3805ebe"),
+        imageUrl: wiki.grandCentral,
         walkFromPrev: null,
         tip: "Punto de inicio. Main Concourse y techo astronómico (~20–30 min).",
         note: "Inicio 14:30",
@@ -156,7 +186,7 @@ export const nycDays: NycDay[] = [
         time: "10:00",
         lat: 40.7486,
         lng: -73.988,
-        imageUrl: u("photo-1477959858617-67f85cf4f1df"),
+        imageUrl: wiki.freeTour,
         walkFromPrev: null,
         tip: "Reservá cupo online (tips al guía). Punto de encuentro cerca de Herald Square / ESB.",
         note: "Free Tour",
@@ -202,7 +232,7 @@ export const nycDays: NycDay[] = [
         time: "15:45",
         lat: 40.748,
         lng: -74.0048,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.highLine,
         walkFromPrev: "🚶 Acceso High Line desde Hudson Yards (~5 min)",
         tip: "Caminá elevada hacia Chelsea / Meatpacking (~25–40 min con fotos).",
       },
@@ -255,7 +285,7 @@ export const nycDays: NycDay[] = [
         time: "10:00",
         lat: 40.7681,
         lng: -73.9819,
-        imageUrl: u("photo-1568515387631-8b650bbcdb90"),
+        imageUrl: wiki.freeTour,
         walkFromPrev: null,
         tip: "Encuentro habitual en Columbus Circle. Confirmá punto exacto al reservar.",
         note: "Free Tour",
@@ -280,7 +310,7 @@ export const nycDays: NycDay[] = [
         time: "13:00",
         lat: 40.7759,
         lng: -73.9718,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.bowBridge,
         walkFromPrev: "🚶 6 min a pie (450 m)",
         tip: "Foto clásica sobre el lago; seguí hacia Bethesda.",
         note: "Central Park",
@@ -300,11 +330,7 @@ export const nycDays: NycDay[] = [
       {
         id: "d3-4",
         order: 5,
-        name: "Castillo Belvedere",
-        time: "14:15",
-        lat: 40.7794,
-        lng: -73.9692,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.belvedere,
         walkFromPrev: "🚶 12 min a pie (900 m)",
         tip: "Vistas al Great Lawn antes de salir hacia UWS.",
         note: "Central Park",
@@ -365,11 +391,7 @@ export const nycDays: NycDay[] = [
       {
         id: "d4-0",
         order: 1,
-        name: "Free Tour · Distrito Financiero & 11/09",
-        time: "09:00",
-        lat: 40.7056,
-        lng: -74.0134,
-        imageUrl: u("photo-1485871981521-5b1fd3805ebe"),
+        imageUrl: wiki.freeTour,
         walkFromPrev: null,
         tip: "Empezá temprano en Bowling Green / Charging Bull. Luego bajá a Battery para el ferry.",
         note: "Free Tour",
@@ -378,44 +400,28 @@ export const nycDays: NycDay[] = [
       {
         id: "d4-1",
         order: 2,
-        name: "Battery Park (embaradero)",
-        time: "11:15",
-        lat: 40.7033,
-        lng: -74.017,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.batteryPark,
         walkFromPrev: "🚶 8 min a pie (600 m)",
         tip: "Ticket oficial Statue City Cruises. Seguridad tipo aeropuerto.",
       },
       {
         id: "d4-2",
         order: 3,
-        name: "Estatua de la Libertad & Ellis Island",
-        time: "11:45",
-        lat: 40.6892,
-        lng: -74.0445,
-        imageUrl: u("photo-1503177119275-0aa32b37a56b"),
+        imageUrl: wiki.statueOfLiberty,
         walkFromPrev: "⛴️ Ferry desde Battery (~15–20 min)",
         tip: "Sin pedestal/corona igual vale la pena. Volvé con margen a downtown.",
       },
       {
         id: "d4-3",
         order: 4,
-        name: "Wall Street · Charging Bull, NYSE & Trinity Church",
-        time: "15:00",
-        lat: 40.7075,
-        lng: -74.0113,
-        imageUrl: u("photo-1485871981521-5b1fd3805ebe"),
+        imageUrl: wiki.wallStreet,
         walkFromPrev: "⛴️ Regreso + 🚶 10 min (700 m)",
         tip: "NYSE solo fachada; Trinity Church a 2 cuadras de Wall St.",
       },
       {
         id: "d4-4",
         order: 5,
-        name: "Memorial 11-S · Museo & Oculus",
-        time: "16:15",
-        lat: 40.7115,
-        lng: -74.0134,
-        imageUrl: u("photo-1506157786151-b8491531f063"),
+        imageUrl: wiki.memorial911,
         walkFromPrev: "🚶 8 min a pie (600 m)",
         tip: "Pools del Memorial gratis. Museo con ticket; Oculus para fotos/baño.",
       },
@@ -453,11 +459,7 @@ export const nycDays: NycDay[] = [
       {
         id: "d5-0",
         order: 1,
-        name: "Free Tour · DUMBO & Brooklyn Heights",
-        time: "10:00",
-        lat: 40.7061,
-        lng: -73.9969,
-        imageUrl: u("photo-1558365960-c48cc9fd5925"),
+        imageUrl: wiki.freeTour,
         walkFromPrev: null,
         tip: "Muchos tours arrancan en la entrada del puente (Manhattan). Confirmá el pin.",
         note: "Free Tour",
@@ -466,44 +468,28 @@ export const nycDays: NycDay[] = [
       {
         id: "d5-1",
         order: 2,
-        name: "Cruce a pie del Puente de Brooklyn",
-        time: "10:15",
-        lat: 40.7061,
-        lng: -73.9969,
-        imageUrl: u("photo-1558365960-c48cc9fd5925"),
+        imageUrl: wiki.brooklynBridge,
         walkFromPrev: "🚶 Inicio del paseo peatonal",
         tip: "25–40 min Manhattan → Brooklyn según fotos. Carril peatonal central.",
       },
       {
         id: "d5-2",
         order: 3,
-        name: "Brooklyn Heights Promenade",
-        time: "11:15",
-        lat: 40.696,
-        lng: -73.9972,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.brooklynHeights,
         walkFromPrev: "🚶 12 min a pie (900 m) desde salida del puente",
         tip: "Mirador clásico al skyline y al puente. Ideal antes o después de DUMBO.",
       },
       {
         id: "d5-3",
         order: 4,
-        name: "DUMBO · Washington St, Jane's Carousel & Pebble Beach",
-        time: "12:15",
-        lat: 40.7033,
-        lng: -73.9903,
-        imageUrl: u("photo-1500916434205-0c77489c6cfb"),
+        imageUrl: wiki.dumboWashington,
         walkFromPrev: "🚶 15 min a pie (1.1 km)",
         tip: "Foto en Washington St + carrusel + orilla (Pebble Beach).",
       },
       {
         id: "d5-4",
         order: 5,
-        name: "Time Out Market DUMBO (almuerzo)",
-        time: "13:30",
-        lat: 40.7035,
-        lng: -73.9914,
-        imageUrl: u("photo-1414235077428-338989a2e8c0"),
+        imageUrl: wiki.janesCarousel,
         walkFromPrev: "🚶 3 min a pie (200 m)",
         tip: "Food hall con terraza. Buen punto para descansar antes de Williamsburg.",
         note: "Almuerzo",

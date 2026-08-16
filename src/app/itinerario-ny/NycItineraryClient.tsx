@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
@@ -19,6 +18,7 @@ import {
   nycDayColors,
   nycDays,
 } from "@/data/nyItineraryData";
+import { AttractionImage } from "@/components/parks/AttractionImage";
 import { cn } from "@/lib/utils";
 
 const NYMap = dynamic(() => import("@/components/NYMap"), {
@@ -275,11 +275,11 @@ export function NycItineraryPage() {
                   >
                     <article className="grid gap-0 sm:grid-cols-[140px_1fr]">
                       <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[140px]">
-                        <Image
+                        <AttractionImage
                           src={stop.imageUrl}
                           alt={stop.name}
                           fill
-                          className="object-cover"
+                          className="rounded-none object-cover shadow-none sm:rounded-none"
                           sizes="(max-width: 640px) 100vw, 140px"
                         />
                         <span

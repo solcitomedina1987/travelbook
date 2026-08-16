@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ImageOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -14,8 +14,13 @@ type AttractionImageProps = {
   fill?: boolean;
   width?: number;
   height?: number;
+  /** Optional local/CDN fallback if primary src fails */
+  fallbackSrc?: string;
 };
 
+/**
+ * Next.js Image with onError fallback to avoid broken park/itinerary photos.
+ */
 export function AttractionImage({
   src,
   alt,
@@ -25,10 +30,25 @@ export function AttractionImage({
   fill = true,
   width,
   height,
+  fallbackSrc = "/images/header-banner.jpg",
 }: AttractionImageProps) {
+  const [currentSrc, setCurrentSrc] = useState(src);
   const [failed, setFailed] = useState(false);
 
-  if (failed || !src) {
+  useEffect(() => {
+    setCurrentSrc(src);
+    setFailed(false);
+  }, [src]);
+
+  const handleError = () => {
+    if (fallbackSrc && currentSrc !== fallbackSrc) {
+      setCurrentSrc(fallbackSrc);
+      return;
+    }
+    setFailed(true);
+  };
+
+  if (failed || !currentSrc) {
     return (
       <div
         className={cn(
@@ -47,27 +67,29 @@ export function AttractionImage({
   if (fill) {
     return (
       <Image
-        src={src}
+        key={currentSrc}
+        src={currentSrc}
         alt={alt}
         fill
         priority={priority}
         sizes={sizes}
         className={cn("rounded-lg object-cover shadow-sm", className)}
-        onError={() => setFailed(true)}
+        onError={handleError}
       />
     );
   }
 
   return (
     <Image
-      src={src}
+      key={currentSrc}
+      src={currentSrc}
       alt={alt}
       width={width ?? 320}
       height={height ?? 200}
       priority={priority}
       sizes={sizes}
       className={cn("rounded-lg object-cover shadow-sm", className)}
-      onError={() => setFailed(true)}
+      onError={handleError}
     />
   );
 }
