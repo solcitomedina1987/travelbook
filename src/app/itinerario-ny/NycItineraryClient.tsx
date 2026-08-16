@@ -10,6 +10,7 @@ import {
   Lightbulb,
   Map as MapIcon,
   Route,
+  Ticket,
   Users,
 } from "lucide-react";
 import {
@@ -298,6 +299,19 @@ export function NycItineraryPage() {
                             <Clock3 className="h-3.5 w-3.5" />
                             {stop.time}
                           </span>
+                          {stop.price && (
+                            <span
+                              className={cn(
+                                "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold tracking-wide",
+                                stop.price.toLowerCase().startsWith("gratis")
+                                  ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                                  : "bg-amber-50 text-amber-900 border border-amber-300",
+                              )}
+                            >
+                              <Ticket className="h-3 w-3 text-amber-600" />
+                              {stop.price}
+                            </span>
+                          )}
                           {stop.isFreeTour && (
                             <span className="inline-flex items-center gap-1 rounded-full bg-teal px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
                               <Users className="h-3 w-3" />

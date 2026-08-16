@@ -9,6 +9,7 @@ export type NycStop = {
   walkFromPrev: string | null;
   tip: string;
   note?: string;
+  price?: string;
   isFreeTour?: boolean;
   dayId?: string;
   dayLabel?: string;
@@ -124,6 +125,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: null,
         tip: "Punto de inicio. Main Concourse y techo astronómico (~20–30 min).",
         note: "Inicio 14:30",
+        price: "Gratis",
       },
       {
         id: "d1-2",
@@ -135,6 +137,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1496442226666-8d4d0e62e6e9"),
         walkFromPrev: "🚶 3 min a pie (200 m)",
         tip: "Pegado a Grand Central. Ticket timed; ventanas inmersivas con vista a Midtown.",
+        price: "$42 - $46 USD",
       },
       {
         id: "d1-3",
@@ -146,6 +149,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1520250497591-112f2f40a3f4"),
         walkFromPrev: "🚶 6 min a pie (450 m)",
         tip: "Leones Patience & Fortitude + cruce a Bryant Park para un café corto.",
+        price: "Gratis",
       },
       {
         id: "d1-4",
@@ -157,6 +161,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1441986300917-64674bd600d8"),
         walkFromPrev: "🚶 10 min a pie (750 m)",
         tip: "Caminata al norte por 5th Ave hasta Rockefeller Center.",
+        price: "Gratis",
       },
       {
         id: "d1-5",
@@ -169,6 +174,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 4 min a pie (300 m)",
         tip: "Mejor vista al Empire State. Ideal con luz de atardecer.",
         note: "Atardecer",
+        price: "$40 - $44 USD",
       },
       {
         id: "d1-6",
@@ -181,6 +187,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 8 min a pie (600 m)",
         tip: "Cierre del día con las luces. Evitá restaurantes del cruce principal. Visitar cerca: Radio City Music Hall, M&M world, Toys 'R' Us, Central Perk, etc",
         note: "Noche",
+        price: "Gratis",
       },
     ],
   },
@@ -213,6 +220,7 @@ export const nycDays: NycDay[] = [
         tip: "Reservá cupo online (tips al guía). Punto de encuentro cerca de Herald Square / ESB.",
         note: "Free Tour",
         isFreeTour: true,
+        price: "$25 USD (Propina sugerida)",
       },
       {
         id: "d2-1",
@@ -224,6 +232,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1546436836-07a91091f160"),
         walkFromPrev: "🚶 4 min a pie (300 m)",
         tip: "Si preferís vista de noche, podés posponer y priorizar High Line de día.",
+        price: "$44 USD",
       },
       {
         id: "d2-2",
@@ -235,6 +244,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1477959858617-67f85cf4f1df"),
         walkFromPrev: "🚶 10 min a pie (750 m)",
         tip: "Pasá por el exterior/lobby camino a Hudson Yards.",
+        price: "Gratis (Exterior)",
       },
       {
         id: "d2-3",
@@ -246,6 +256,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1514565131-fce0801e5785"),
         walkFromPrev: "🚶 12 min a pie (850 m)",
         tip: "The Edge opcional. Subí a la High Line desde aquí hacia el sur.",
+        price: "Gratis (The Edge opt. $40)",
       },
       {
         id: "d2-4",
@@ -257,6 +268,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.highLine,
         walkFromPrev: "🚶 Acceso High Line desde Hudson Yards (~5 min)",
         tip: "Caminá elevada hacia Chelsea / Meatpacking (~25–40 min con fotos).",
+        price: "Gratis",
       },
       {
         id: "d2-5",
@@ -268,6 +280,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1555507036-ab1f4038808a"),
         walkFromPrev: "🚶 12 min por High Line (900 m)",
         tip: "Snack o late lunch en Chelsea Market; Meatpacking queda al bajar.",
+        price: "Pago por consumo",
       },
       {
         id: "d2-6",
@@ -280,6 +293,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 8 min a pie (600 m)",
         tip: "Cierre con vistas al Hudson. Ideal al atardecer.",
         note: "Atardecer",
+        price: "Gratis",
       },
     ],
   },
@@ -306,6 +320,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: null,
         tip: "Retiro de bicicletas a las 8:00 AM (Zona The Plaza Hotel)para ingresar al parque puntuales a las 9:00 AM. https://bikerent.nyc/locations",
         note: "Inicio 08:00 hs · Bicis",
+        price: "$20 - $25 USD (3-4 hs)",
       },
       {
         id: "d3-2",
@@ -318,6 +333,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 5 min en bici desde el rental hacia 5th Ave & 59th St",
         tip: "El mítico hotel de 'Mi Pobre Angelito 2: Perdido en Nueva York'. Foto clásica en la fachada antes de ingresar al parque por Grand Army Plaza.",
         note: "Cine · Mi Pobre Angelito",
+        price: "Gratis (Exterior)",
       },
       {
         id: "d3-3",
@@ -330,6 +346,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 3 min en bici (300 m) sobre The Pond",
         tip: "El icónico puente de piedra sobre el estanque donde Kevin se encuentra con la mujer de las palomas. Vista postal con The Plaza de fondo.",
         note: "Cine · Spot icónico",
+        price: "Gratis",
       },
       {
         id: "d3-4",
@@ -341,6 +358,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.umpireRock,
         walkFromPrev: "🚲 5 min en bici (600 m) cruzando hacia el sudoeste",
         tip: "Enorme formación rocosa de esquisto de Manhattan con excelentes vistas panorámicas de los rascacielos de Central Park South y Midtown.",
+        price: "Gratis",
       },
       {
         id: "d3-5",
@@ -352,6 +370,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.carousel,
         walkFromPrev: "🚲 4 min en bici (450 m)",
         tip: "Histórico carrusel de 1908 con 57 caballos tallados a mano y órgano de música mecánica tradicional.",
+        price: "$3.50 USD",
       },
       {
         id: "d3-6",
@@ -363,6 +382,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.sheepMeadow,
         walkFromPrev: "🚲 3 min en bici (350 m)",
         tip: "6 hectáreas de pradera abierta perfecta para descansar y admirar el contraste de la naturaleza con los rascacielos de Billionaires' Row.",
+        price: "Gratis",
       },
       {
         id: "d3-7",
@@ -375,6 +395,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 4 min en bici (400 m) hacia 72nd St West",
         tip: "Memorial a John Lennon frente al histórico edificio Dakota. Zona de meditación y música en vivo con el mosaico de 'Imagine'.",
         note: "Memorial",
+        price: "Gratis",
       },
       {
         id: "d3-8",
@@ -386,6 +407,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.cherryHill,
         walkFromPrev: "🚲 3 min en bici (300 m)",
         tip: "Mirador circular con su clásica fuente ornamental victoriana diseñada originalmente como bebedero de caballos; postal directa hacia The Lake.",
+        price: "Gratis",
       },
       {
         id: "d3-9",
@@ -398,6 +420,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 3 min en bici / a pie (250 m)",
         tip: "El puente de hierro fundido más romántico y fotografiado de Central Park, uniendo Cherry Hill con The Ramble sobre el lago.",
         note: "Spot fotográfico",
+        price: "Gratis",
       },
       {
         id: "d3-10",
@@ -409,6 +432,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1496442226666-8d4d0e62e6e9"),
         walkFromPrev: "🚲 3 min en bici (250 m)",
         tip: "El corazón de Central Park: arcada con azulejos Minton, la fuente del Ángel de las Aguas y el paseo The Mall.",
+        price: "Gratis",
       },
       {
         id: "d3-11",
@@ -420,6 +444,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.pilgrimHill,
         walkFromPrev: "🚲 4 min en bici (400 m) hacia el lado Este (East 72nd St)",
         tip: "Hermosa colina suave con la estatua del Peregrino de 1885 y vistas abiertas cerca de Conservatory Water.",
+        price: "Gratis",
       },
       {
         id: "d3-12",
@@ -431,6 +456,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.theRamble,
         walkFromPrev: "🚲 5 min hacia el norte del lago (500 m)",
         tip: "15 hectáreas de bosque denso y laberíntico con arroyos, senderos de tierra y avistamiento de aves.",
+        price: "Gratis",
       },
       {
         id: "d3-13",
@@ -443,6 +469,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 4 min en bici (400 m)",
         tip: "Castillo de estilo victoriano de 1869 en lo alto de Vista Rock con las mejores vistas panorámicas de The Great Lawn y Turtle Pond.",
         note: "Castillo · Vistas",
+        price: "Gratis",
       },
       {
         id: "d3-14",
@@ -454,6 +481,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.greatLawn,
         walkFromPrev: "🚲 3 min en bici (300 m)",
         tip: "Enorme césped central de 22 hectáreas donde se realizan los clásicos conciertos al aire libre de la Filarmónica de NY.",
+        price: "Gratis",
       },
       {
         id: "d3-15",
@@ -466,6 +494,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚲 15–20 min pedaleando por West Drive de regreso al rental en la zona del Museo de Historia Natural",
         tip: "Entrega de bicicletas y cascos. Tiempo libre para almuerzo rápido camino al museo.",
         note: "Devolución bicis",
+        price: "Incluido en alquiler",
       },
       {
         id: "d3-16",
@@ -478,6 +507,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚇 Metro C/B o 🚶 15 min por Central Park West",
         tip: "Entrada alrededor de las 13:45 hs para aprovechar ~3.5 horas completas. Salas imperdibles: Dinosaurios, Ballena Azul y Planetario Hayden (Gilder Center).",
         note: "Visita principal (3.5 h)",
+        price: "$28 USD",
       },
       {
         id: "d3-17",
@@ -489,6 +519,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1441986300917-64674bd600d8"),
         walkFromPrev: "🚶 6 min a pie (400 m) al salir del museo",
         tip: "Calles residenciales arboladas, clásicos brownstones y paseo por Amsterdam y Columbus Avenue.",
+        price: "Gratis",
       },
       {
         id: "d3-18",
@@ -501,6 +532,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 5 min a pie (350 m)",
         tip: "Las famosas cookies tibias de Levain Bakery (W 74th St) o el deli tradicional Zabar's (Broadway & 80th).",
         note: "Café / Merienda",
+        price: "Pago por consumo (~$5 USD)",
       },
     ],
   },
@@ -509,11 +541,11 @@ export const nycDays: NycDay[] = [
     tabLabel: "Día 4 (18/04)",
     dateLabel: "18 de Abril de 2027",
     dayName: "Domingo",
-    title: "Friends Building, Lower Manhattan & Distrito Financiero",
+    title: "Friends Building, Wall Street, Estatua de la Libertad & Memorial 11-S",
     summary:
-      "Arranque en el edificio de Friends (Greenwich Village), Free Tour del Financial District & 11/09, ferry a Liberty/Ellis y cierre en One World Observatory.",
+      "Arranque en Friends (Greenwich Village), Wall Street matutino, ferry a la Estatua de la Libertad, Free Tour del Financial District por la tarde, Memorial 11-S y cierre optativo en One World Observatory.",
     distanceKm: "~4.5 km a pie (+ metro y ferry)",
-    theme: "Friends · Historia · Downtown · Observatorio",
+    theme: "Friends · Wall St · Estatua Libertad · 11-S",
     freeTour: {
       name: "Distrito Financiero & 11/09",
       providerHint: "Freetour.com / Wall Street Free Tour",
@@ -530,54 +562,61 @@ export const nycDays: NycDay[] = [
         lng: -74.0054,
         imageUrl: wiki.friendsBuilding,
         walkFromPrev: null,
-        tip: "El famoso edificio del departamento de Monica, Rachel, Chandler y Joey (esquina Bedford St & Grove St en Greenwich Village). En la planta baja está 'The Little Owl'. Desde allí, tomar metro Línea 1 en Christopher St hacia Bowling Green.",
+        tip: "El famoso edificio del departamento de Monica, Rachel, Chandler y Joey (esquina Bedford St & Grove St en Greenwich Village). En la planta baja está 'The Little Owl'. Desde allí, tomar metro Línea 1 en Christopher St hacia Wall St.",
         note: "Serie Friends · Inicio 08:15",
+        price: "Gratis (Exterior)",
       },
       {
         id: "d4-1",
         order: 2,
-        name: "Free Tour · Distrito Financiero & 11/09",
-        time: "09:30",
-        lat: 40.7056,
-        lng: -74.0134,
-        imageUrl: wiki.freeTour,
-        walkFromPrev: "🚇 Metro Línea 1 desde Christopher St hasta South Ferry / Bowling Green (~15 min)",
-        tip: "Punto de encuentro en Bowling Green / Charging Bull. Recorrido histórico por Wall St, Trinity Church y Memorial 11-S.",
-        note: "Free Tour",
-        isFreeTour: true,
+        name: "Wall Street · Charging Bull, NYSE & Trinity Church",
+        time: "09:00",
+        lat: 40.7075,
+        lng: -74.0113,
+        imageUrl: wiki.wallStreet,
+        walkFromPrev: "🚇 Metro Línea 1 desde Christopher St hasta Rector St / Wall St (~15 min)",
+        tip: "Paseo matutino por el corazón financiero: foto en Charging Bull antes de las filas, fachada de la Bolsa (NYSE) y la histórica Trinity Church.",
+        note: "Distrito Financiero",
+        price: "Gratis",
       },
       {
         id: "d4-2",
         order: 3,
         name: "Battery Park (embarcadero)",
-        time: "11:30",
+        time: "10:15",
         lat: 40.7033,
         lng: -74.017,
         imageUrl: wiki.batteryPark,
-        walkFromPrev: "🚶 5 min a pie (400 m) desde Bowling Green",
-        tip: "Ticket oficial Statue City Cruises. Control de seguridad previo al embarque.",
+        walkFromPrev: "🚶 8 min a pie (600 m) al sur por Broadway",
+        tip: "Caminata al extremo sur hacia Castle Clinton para el control de seguridad y embarque del ferry de Statue City Cruises.",
+        price: "Gratis (Acceso)",
       },
       {
         id: "d4-3",
         order: 4,
         name: "Estatua de la Libertad & Ellis Island",
-        time: "12:00",
+        time: "10:45",
         lat: 40.6892,
         lng: -74.0445,
         imageUrl: wiki.statueOfLiberty,
-        walkFromPrev: "⛴️ Ferry desde Battery (~15–20 min)",
-        tip: "Paseo en barco con vistas a la bahía y Manhattan. Parada en Liberty Island y Ellis Island.",
+        walkFromPrev: "⛴️ Ferry oficial desde Battery (~15–20 min)",
+        tip: "Ticket oficial Statue City Cruises. Paseo en barco con desembarco en Liberty Island y Museo de Inmigración en Ellis Island. Regreso a Battery ~13:30 hs.",
+        note: "Ferry & Monumento",
+        price: "$25.50 - $31.50 USD",
       },
       {
         id: "d4-4",
         order: 5,
-        name: "Wall Street · Charging Bull, NYSE & Trinity Church",
-        time: "15:00",
-        lat: 40.7075,
-        lng: -74.0113,
-        imageUrl: wiki.wallStreet,
-        walkFromPrev: "⛴️ Regreso en ferry + 🚶 10 min a pie (700 m)",
-        tip: "Paseo por el corazón financiero: foto en Charging Bull, fachada de NYSE y Trinity Church.",
+        name: "Free Tour · Distrito Financiero & 11/09",
+        time: "14:00",
+        lat: 40.7056,
+        lng: -74.0134,
+        imageUrl: wiki.freeTour,
+        walkFromPrev: "🚶 5 min a pie (400 m) desde Battery Park hacia el punto de encuentro",
+        tip: "Free tour guiado a pie por la tarde conectando la historia de New Amsterdam, George Washington, Wall Street y los eventos del 11 de Septiembre.",
+        note: "Free Tour",
+        isFreeTour: true,
+        price: "$25 USD (Propina sugerida)",
       },
       {
         id: "d4-5",
@@ -587,20 +626,23 @@ export const nycDays: NycDay[] = [
         lat: 40.7115,
         lng: -74.0134,
         imageUrl: wiki.memorial911,
-        walkFromPrev: "🚶 8 min a pie (600 m)",
-        tip: "Visita a las piscinas conmemorativas y arquitectura futurista del Oculus (Santiago Calatrava).",
+        walkFromPrev: "🚶 3 min a pie desde el final del tour",
+        tip: "Momento de reflexión en las piscinas conmemorativas North y South Pools (acceso libre). Visita a la arquitectura futurista de The Oculus (Santiago Calatrava).",
+        note: "Memorial & Oculus",
+        price: "Gratis (Museo optativo $33 USD)",
       },
       {
         id: "d4-6",
         order: 7,
-        name: "One World Observatory",
+        name: "One World Observatory (Opcional)",
         time: "18:00",
         lat: 40.7127,
         lng: -74.0134,
         imageUrl: u("photo-1496442226666-8d4d0e62e6e9"),
-        walkFromPrev: "🚶 3 min a pie (200 m)",
-        tip: "Cierre del día con vistas 360° de la ciudad y el atardecer desde el rascacielos más alto de occidente.",
-        note: "Atardecer / noche",
+        walkFromPrev: "🚶 2 min a pie (150 m)",
+        tip: "Observatorio en el piso 102 con vistas 360° panorámicas al atardecer. Opcional si ya se subió a otros miradores de la ciudad.",
+        note: "Opcional · Atardecer",
+        price: "$44 USD (Opcional)",
       },
     ],
   },
@@ -633,6 +675,7 @@ export const nycDays: NycDay[] = [
         tip: "Muchos tours arrancan en la entrada del puente (Manhattan). Confirmá el pin.",
         note: "Free Tour",
         isFreeTour: true,
+        price: "$25 USD (Propina sugerida)",
       },
       {
         id: "d5-1",
@@ -644,6 +687,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.brooklynBridge,
         walkFromPrev: "🚶 Inicio del paseo peatonal",
         tip: "25–40 min Manhattan → Brooklyn según fotos. Carril peatonal central.",
+        price: "Gratis",
       },
       {
         id: "d5-2",
@@ -655,6 +699,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.brooklynHeights,
         walkFromPrev: "🚶 12 min a pie (900 m) desde salida del puente",
         tip: "Mirador clásico al skyline y al puente. Ideal antes o después de DUMBO.",
+        price: "Gratis",
       },
       {
         id: "d5-3",
@@ -666,6 +711,7 @@ export const nycDays: NycDay[] = [
         imageUrl: wiki.dumboWashington,
         walkFromPrev: "🚶 15 min a pie (1.1 km)",
         tip: "Foto en Washington St + carrusel + orilla (Pebble Beach).",
+        price: "Gratis (Jane's Carousel $3 USD)",
       },
       {
         id: "d5-4",
@@ -678,6 +724,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 3 min a pie (200 m)",
         tip: "Food hall con terraza. Buen punto para descansar antes de Williamsburg.",
         note: "Almuerzo",
+        price: "Pago por consumo",
       },
       {
         id: "d5-5",
@@ -689,6 +736,7 @@ export const nycDays: NycDay[] = [
         imageUrl: u("photo-1514565131-fce0801e5785"),
         walkFromPrev: "🚇 L / ferry East River (~20–30 min) — evitar caminar todo",
         tip: "Domino Park sobre el East River. Calles de Bedford Ave para boutiques.",
+        price: "Gratis (Metro/Ferry $2.90 USD)",
       },
       {
         id: "d5-6",
@@ -701,6 +749,7 @@ export const nycDays: NycDay[] = [
         walkFromPrev: "🚶 12–15 min a pie (1 km) o short Uber",
         tip: "Cierre con skyline. Westlight (William Vale) o Harriet's — reservá mesa.",
         note: "Rooftop · cierre",
+        price: "Pago por consumo (~$20-25 USD)",
       },
     ],
   },
