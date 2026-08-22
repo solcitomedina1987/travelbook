@@ -80,13 +80,20 @@ export function NycItinerary() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap items-center gap-4">
           <Link
             href="/itinerario-ny"
-            className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700"
+            className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-700 shadow-sm"
           >
             Abrir itinerario NY con mapa
             <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/nueva-york/alojamiento"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-gold/15 px-5 py-3 text-sm font-semibold text-amber-900 transition hover:bg-gold/30 shadow-sm"
+          >
+            ★ Hotel Seleccionado & Comparativa
+            <ArrowRight className="h-4 w-4 text-gold" />
           </Link>
         </div>
       </div>

@@ -31,14 +31,40 @@ export const tripMeta = {
   dateRange: "13 de Abril al 04 de Mayo de 2027",
 } as const;
 
-export const navLinks = [
+export type NavSubItem = {
+  label: string;
+  href: string;
+  description?: string;
+};
+
+export type NavItem = {
+  label: string;
+  href?: string;
+  children?: NavSubItem[];
+};
+
+export const navLinks: NavItem[] = [
   { href: "/#inicio", label: "Inicio" },
   { href: "/#calendario", label: "Calendario" },
+  {
+    label: "Nueva York",
+    children: [
+      {
+        label: "Itinerario",
+        href: "/itinerario-ny",
+        description: "Recorrido diario de 5 días con mapas, horarios y atracciones",
+      },
+      {
+        label: "Alojamiento",
+        href: "/nueva-york/alojamiento",
+        description: "Hotel seleccionado y comparativa detallada en Times Square",
+      },
+    ],
+  },
   { href: "/#disney", label: "Disney" },
   { href: "/#universal", label: "Universal" },
-  { href: "/itinerario-ny", label: "Itinerario NY" },
   { href: "/#itinerario-miami", label: "Itinerario Miami" },
-] as const;
+];
 
 /** Exact trip roadmap — 13/04/2027 to 04/05/2027 */
 export const calendarDays: CalendarDay[] = [

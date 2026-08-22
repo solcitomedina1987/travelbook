@@ -61,13 +61,22 @@ export function NycItineraryPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(217,119,6,0.18),transparent_45%)]" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/#itinerario-ny"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-offwhite backdrop-blur-sm transition hover:bg-white/10"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Volver al portal
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-offwhite backdrop-blur-sm transition hover:bg-white/10"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Volver al portal
+            </Link>
+            <Link
+              href="/nueva-york/alojamiento"
+              className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-medium text-gold-soft backdrop-blur-sm transition hover:bg-gold/25"
+            >
+              <span className="flex h-2 w-2 rounded-full bg-gold animate-pulse" />
+              Ver Alojamiento & Hotel Seleccionado
+            </Link>
+          </div>
 
           <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold-soft">
             Nueva York · 15–19 Abr 2027
