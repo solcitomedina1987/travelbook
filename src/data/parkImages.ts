@@ -1,110 +1,40 @@
-const disneyMedia = (path: string) =>
-  `https://images.wdpromedia.com/resize/mwImage/1/630/354/75/dam/wdw/${path}`;
-
-/** Official Disney & Universal CDN photos with fallback mechanisms */
+/** Official Disney World & Universal high-resolution photos */
 export const parkImages: Record<string, string> = {
-  // Magic Kingdom (Official Disney World CDN)
-  "mk-hero":
-    "https://images.wdpromedia.com/resize/mwImage/1/1600/900/75/dam/wdw/destinations/magic-kingdom/magic-kingdom-hero.jpg",
-  "mk-tron": disneyMedia(
-    "attractions/magic-kingdom/tron-lightcycle-run/tron-lightcycle-run-gallery00.jpg",
-  ),
-  "mk-space": disneyMedia(
-    "attractions/magic-kingdom/space-mountain/space-mountain-gallery00.jpg",
-  ),
-  "mk-mine": disneyMedia(
-    "attractions/magic-kingdom/seven-dwarfs-mine-train/seven-dwarfs-mine-train-gallery00.jpg",
-  ),
-  "mk-peter": disneyMedia(
-    "attractions/magic-kingdom/peter-pans-flight/peter-pans-flight-gallery00.jpg",
-  ),
-  "mk-pooh": disneyMedia(
-    "attractions/magic-kingdom/many-adventures-of-winnie-the-pooh/many-adventures-of-winnie-the-pooh-gallery00.jpg",
-  ),
-  "mk-small-world": disneyMedia(
-    "attractions/magic-kingdom/its-a-small-world/its-a-small-world-gallery00.jpg",
-  ),
-  "mk-little-mermaid": disneyMedia(
-    "attractions/magic-kingdom/under-the-sea-journey-of-the-little-mermaid/under-the-sea-journey-of-the-little-mermaid-gallery00.jpg",
-  ),
-  "mk-barnstormer": disneyMedia(
-    "attractions/magic-kingdom/the-barnstormer/the-barnstormer-gallery00.jpg",
-  ),
-  "mk-dumbo": disneyMedia(
-    "attractions/magic-kingdom/dumbo-the-flying-elephant/dumbo-the-flying-elephant-gallery00.jpg",
-  ),
-  "mk-tea-party": disneyMedia(
-    "attractions/magic-kingdom/mad-tea-party/mad-tea-party-gallery00.jpg",
-  ),
-  "mk-philharmagic": disneyMedia(
-    "attractions/magic-kingdom/mickeys-philharmagic/mickeys-philharmagic-gallery00.jpg",
-  ),
-  "mk-carousel": disneyMedia(
-    "attractions/magic-kingdom/prince-charming-regal-carrousel/prince-charming-regal-carrousel-gallery00.jpg",
-  ),
-  "mk-belle": disneyMedia(
-    "attractions/magic-kingdom/enchanted-tales-with-belle/enchanted-tales-with-belle-gallery00.jpg",
-  ),
-  "mk-haunted": disneyMedia(
-    "attractions/magic-kingdom/haunted-mansion/haunted-mansion-gallery00.jpg",
-  ),
-  "mk-riverboat": disneyMedia(
-    "attractions/magic-kingdom/liberty-square-riverboat/liberty-square-riverboat-gallery00.jpg",
-  ),
-  "mk-presidents": disneyMedia(
-    "attractions/magic-kingdom/hall-of-presidents/hall-of-presidents-gallery00.jpg",
-  ),
-  "mk-thunder": disneyMedia(
-    "attractions/magic-kingdom/big-thunder-mountain-railroad/big-thunder-mountain-railroad-gallery00.jpg",
-  ),
-  "mk-tiana": disneyMedia(
-    "attractions/magic-kingdom/tianas-bayou-adventure/tianas-bayou-adventure-gallery00.jpg",
-  ),
-  "mk-country-bears": disneyMedia(
-    "attractions/magic-kingdom/country-bear-jamboree/country-bear-jamboree-gallery00.jpg",
-  ),
-  "mk-pirates": disneyMedia(
-    "attractions/magic-kingdom/pirates-of-the-caribbean/pirates-of-the-caribbean-gallery00.jpg",
-  ),
-  "mk-jungle": disneyMedia(
-    "attractions/magic-kingdom/jungle-cruise/jungle-cruise-gallery00.jpg",
-  ),
-  "mk-aladdin": disneyMedia(
-    "attractions/magic-kingdom/magic-carpets-of-aladdin/magic-carpets-of-aladdin-gallery00.jpg",
-  ),
-  "mk-tiki": disneyMedia(
-    "attractions/magic-kingdom/enchanted-tiki-room/enchanted-tiki-room-gallery00.jpg",
-  ),
-  "mk-treehouse": disneyMedia(
-    "attractions/magic-kingdom/swiss-family-treehouse/swiss-family-treehouse-gallery00.jpg",
-  ),
-  "mk-railroad": disneyMedia(
-    "attractions/magic-kingdom/walt-disney-world-railroad-fantasyland/walt-disney-world-railroad-fantasyland-gallery00.jpg",
-  ),
-  "mk-festival": disneyMedia(
-    "entertainment/magic-kingdom/festival-of-fantasy-parade/festival-of-fantasy-parade-gallery00.jpg",
-  ),
-  "mk-buzz": disneyMedia(
-    "attractions/magic-kingdom/buzz-lightyears-space-ranger-spin/buzz-lightyears-space-ranger-spin-gallery00.jpg",
-  ),
-  "mk-monsters": disneyMedia(
-    "attractions/magic-kingdom/monsters-inc-laugh-floor/monsters-inc-laugh-floor-gallery02.jpg",
-  ),
-  "mk-speedway": disneyMedia(
-    "attractions/magic-kingdom/tomorrowland-speedway/tomorrowland-speedway-gallery00.jpg",
-  ),
-  "mk-astro-orbiter": disneyMedia(
-    "attractions/magic-kingdom/astro-orbiter/astro-orbiter-gallery00.jpg",
-  ),
-  "mk-peoplemover": disneyMedia(
-    "attractions/magic-kingdom/tomorrowland-transit-authority-peoplemover/tomorrowland-transit-authority-peoplemover-gallery00.jpg",
-  ),
-  "mk-carousel-progress": disneyMedia(
-    "attractions/magic-kingdom/walt-disneys-carousel-of-progress/walt-disneys-carousel-of-progress-gallery00.jpg",
-  ),
-  "mk-hea": disneyMedia(
-    "entertainment/magic-kingdom/happily-ever-after/happily-ever-after-gallery00.jpg",
-  ),
+  // Magic Kingdom (Official Disney World Photos)
+  "mk-hero": "/images/parks/magic-kingdom/mk-hero.jpg",
+  "mk-tron": "/images/parks/magic-kingdom/mk-tron.jpg",
+  "mk-space": "/images/parks/magic-kingdom/mk-space.jpg",
+  "mk-mine": "/images/parks/magic-kingdom/mk-mine.jpg",
+  "mk-peter": "/images/parks/magic-kingdom/mk-peter.jpg",
+  "mk-pooh": "/images/parks/magic-kingdom/mk-pooh.jpg",
+  "mk-small-world": "/images/parks/magic-kingdom/mk-small-world.jpg",
+  "mk-little-mermaid": "/images/parks/magic-kingdom/mk-little-mermaid.jpg",
+  "mk-barnstormer": "/images/parks/magic-kingdom/mk-barnstormer.jpg",
+  "mk-dumbo": "/images/parks/magic-kingdom/mk-dumbo.jpg",
+  "mk-tea-party": "/images/parks/magic-kingdom/mk-tea-party.jpg",
+  "mk-philharmagic": "/images/parks/magic-kingdom/mk-philharmagic.jpg",
+  "mk-carousel": "/images/parks/magic-kingdom/mk-carousel.jpg",
+  "mk-belle": "/images/parks/magic-kingdom/mk-belle.jpg",
+  "mk-haunted": "/images/parks/magic-kingdom/mk-haunted.jpg",
+  "mk-riverboat": "/images/parks/magic-kingdom/mk-riverboat.jpg",
+  "mk-presidents": "/images/parks/magic-kingdom/mk-presidents.jpg",
+  "mk-thunder": "/images/parks/magic-kingdom/mk-thunder.jpg",
+  "mk-tiana": "/images/parks/magic-kingdom/mk-tiana.jpg",
+  "mk-country-bears": "/images/parks/magic-kingdom/mk-country-bears.jpg",
+  "mk-pirates": "/images/parks/magic-kingdom/mk-pirates.jpg",
+  "mk-jungle": "/images/parks/magic-kingdom/mk-jungle.jpg",
+  "mk-aladdin": "/images/parks/magic-kingdom/mk-aladdin.jpg",
+  "mk-tiki": "/images/parks/magic-kingdom/mk-tiki.jpg",
+  "mk-treehouse": "/images/parks/magic-kingdom/mk-treehouse.jpg",
+  "mk-railroad": "/images/parks/magic-kingdom/mk-railroad.jpg",
+  "mk-festival": "/images/parks/magic-kingdom/mk-festival.jpg",
+  "mk-buzz": "/images/parks/magic-kingdom/mk-buzz.jpg",
+  "mk-monsters": "/images/parks/magic-kingdom/mk-monsters.jpg",
+  "mk-speedway": "/images/parks/magic-kingdom/mk-speedway.jpg",
+  "mk-astro-orbiter": "/images/parks/magic-kingdom/mk-astro-orbiter.jpg",
+  "mk-peoplemover": "/images/parks/magic-kingdom/mk-peoplemover.jpg",
+  "mk-carousel-progress": "/images/parks/magic-kingdom/mk-carousel-progress.jpg",
+  "mk-hea": "/images/parks/magic-kingdom/mk-hea.jpg",
 
   // EPCOT
   "ep-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Spaceship_Earth.jpg/1280px-Spaceship_Earth.jpg",
