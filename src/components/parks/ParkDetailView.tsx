@@ -94,6 +94,7 @@ export function ParkDetailView({ park }: { park: Park }) {
         <AttractionImage
           src={park.heroImage}
           alt={park.name}
+          fallbackSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Cinderella_Castle.jpg/1280px-Cinderella_Castle.jpg"
           priority
           sizes="100vw"
           className="rounded-none"
@@ -227,6 +228,7 @@ export function ParkDetailView({ park }: { park: Park }) {
                         <AttractionImage
                           src={attraction.imageUrl}
                           alt={attraction.name}
+                          fallbackSrc={attraction.fallbackUrl}
                           sizes="(max-width: 640px) 280px, 180px"
                         />
                       </div>

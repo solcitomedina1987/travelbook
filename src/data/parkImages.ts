@@ -1,40 +1,110 @@
-/** Real Wikimedia Commons CDN photos for parks & attractions */
+const disneyMedia = (path: string) =>
+  `https://images.wdpromedia.com/resize/mwImage/1/630/354/75/dam/wdw/${path}`;
+
+/** Official Disney & Universal CDN photos with fallback mechanisms */
 export const parkImages: Record<string, string> = {
-  // Magic Kingdom
-  "mk-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Cinderella_Castle.jpg/1280px-Cinderella_Castle.jpg",
-  "mk-tron": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Tron_Lightcycle_Run.jpg",
-  "mk-space": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Magic_Kingdom_Space_Mountain.jpg/1280px-Magic_Kingdom_Space_Mountain.jpg",
-  "mk-mine": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Seven_Dwarfs_Mine_Train.jpg/1280px-Seven_Dwarfs_Mine_Train.jpg",
-  "mk-peter": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_Pan%27s_Flight_%2834399881866%29.jpg/1280px-Peter_Pan%27s_Flight_%2834399881866%29.jpg",
-  "mk-pooh": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Many_Adventures_of_Winnie_the_Pooh_at_Walt_Disney_World_01.jpg/1280px-The_Many_Adventures_of_Winnie_the_Pooh_at_Walt_Disney_World_01.jpg",
-  "mk-small-world": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/It%27s_a_Small_World_%2840919313264%29.jpg/1280px-It%27s_a_Small_World_%2840919313264%29.jpg",
-  "mk-little-mermaid": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Under_the_Sea_%2842591053734%29.jpg/1280px-Under_the_Sea_%2842591053734%29.jpg",
-  "mk-barnstormer": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/The_Barnstormer_%2816480749069%29.jpg/1280px-The_Barnstormer_%2816480749069%29.jpg",
-  "mk-dumbo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dumbo_the_Flying_Elephant_%2834399859596%29.jpg/1280px-Dumbo_the_Flying_Elephant_%2834399859596%29.jpg",
-  "mk-tea-party": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mad_Tea_Party_%2816665793091%29.jpg/1280px-Mad_Tea_Party_%2816665793091%29.jpg",
-  "mk-philharmagic": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Mickey%27s_PhilharMagic_%2835200388276%29.jpg/1280px-Mickey%27s_PhilharMagic_%2835200388276%29.jpg",
-  "mk-carousel": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Prince_Charming_Regal_Carrousel_%2834438965663%29.jpg/1280px-Prince_Charming_Regal_Carrousel_%2834438965663%29.jpg",
-  "mk-belle": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Enchanted_Tales_with_Belle_%288730997194%29.jpg/1280px-Enchanted_Tales_with_Belle_%288730997194%29.jpg",
-  "mk-haunted": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/The_Haunted_Mansion.jpg/1280px-The_Haunted_Mansion.jpg",
-  "mk-riverboat": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Liberty_Belle_Riverboat_%2835240989075%29.jpg/1280px-Liberty_Belle_Riverboat_%2835240989075%29.jpg",
-  "mk-presidents": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/The_Hall_of_Presidents_%2834399757966%29.jpg/1280px-The_Hall_of_Presidents_%2834399757966%29.jpg",
-  "mk-thunder": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Big_Thunder_Mountain_Railroad_2.jpg/1280px-Big_Thunder_Mountain_Railroad_2.jpg",
-  "mk-tiana": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tiana%27s_Bayou_Adventure_%28Magic_Kingdom%29_1.jpg/1280px-Tiana%27s_Bayou_Adventure_%28Magic_Kingdom%29_1.jpg",
-  "mk-country-bears": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Country_Bear_Jamboree_%2834438947653%29.jpg/1280px-Country_Bear_Jamboree_%2834438947653%29.jpg",
-  "mk-pirates": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Adventureland_at_Magic_Kingdom.jpg/1280px-Adventureland_at_Magic_Kingdom.jpg",
-  "mk-jungle": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Jungle_Cruise.jpg/1280px-Jungle_Cruise.jpg",
-  "mk-aladdin": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/The_Magic_Carpets_of_Aladdin_%2834438927063%29.jpg/1280px-The_Magic_Carpets_of_Aladdin_%2834438927063%29.jpg",
-  "mk-tiki": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Walt_Disney%27s_Enchanted_Tiki_Room_%2835200346386%29.jpg/1280px-Walt_Disney%27s_Enchanted_Tiki_Room_%2835200346386%29.jpg",
-  "mk-treehouse": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Swiss_Family_Treehouse_%2834399723226%29.jpg/1280px-Swiss_Family_Treehouse_%2834399723226%29.jpg",
-  "mk-railroad": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Walt_Disney_World_Railroad_%2834438902503%29.jpg/1280px-Walt_Disney_World_Railroad_%2834438902503%29.jpg",
-  "mk-festival": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Princess_Garden%2C_Festival_of_Fantasy_Parade_%2816398355087%29.jpg/1280px-Princess_Garden%2C_Festival_of_Fantasy_Parade_%2816398355087%29.jpg",
-  "mk-buzz": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Buzz_Lightyear%27s_Space_Ranger_Spin.jpg/1280px-Buzz_Lightyear%27s_Space_Ranger_Spin.jpg",
-  "mk-monsters": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Monsters%2C_Inc._Laugh_Floor_%2835240957595%29.jpg/1280px-Monsters%2C_Inc._Laugh_Floor_%2835240957595%29.jpg",
-  "mk-speedway": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Tomorrowland_Speedway_%2834399694466%29.jpg/1280px-Tomorrowland_Speedway_%2834399694466%29.jpg",
-  "mk-astro-orbiter": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Astro_Orbiter_%2834399684696%29.jpg/1280px-Astro_Orbiter_%2834399684696%29.jpg",
-  "mk-peoplemover": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wdw-peoplemover.jpg/1280px-Wdw-peoplemover.jpg",
-  "mk-carousel-progress": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg/1280px-Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg",
-  "mk-hea": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Fireworks_in_Magic_Kingdom.jpg/1280px-Fireworks_in_Magic_Kingdom.jpg",
+  // Magic Kingdom (Official Disney World CDN)
+  "mk-hero":
+    "https://images.wdpromedia.com/resize/mwImage/1/1600/900/75/dam/wdw/destinations/magic-kingdom/magic-kingdom-hero.jpg",
+  "mk-tron": disneyMedia(
+    "attractions/magic-kingdom/tron-lightcycle-run/tron-lightcycle-run-gallery00.jpg",
+  ),
+  "mk-space": disneyMedia(
+    "attractions/magic-kingdom/space-mountain/space-mountain-gallery00.jpg",
+  ),
+  "mk-mine": disneyMedia(
+    "attractions/magic-kingdom/seven-dwarfs-mine-train/seven-dwarfs-mine-train-gallery00.jpg",
+  ),
+  "mk-peter": disneyMedia(
+    "attractions/magic-kingdom/peter-pans-flight/peter-pans-flight-gallery00.jpg",
+  ),
+  "mk-pooh": disneyMedia(
+    "attractions/magic-kingdom/many-adventures-of-winnie-the-pooh/many-adventures-of-winnie-the-pooh-gallery00.jpg",
+  ),
+  "mk-small-world": disneyMedia(
+    "attractions/magic-kingdom/its-a-small-world/its-a-small-world-gallery00.jpg",
+  ),
+  "mk-little-mermaid": disneyMedia(
+    "attractions/magic-kingdom/under-the-sea-journey-of-the-little-mermaid/under-the-sea-journey-of-the-little-mermaid-gallery00.jpg",
+  ),
+  "mk-barnstormer": disneyMedia(
+    "attractions/magic-kingdom/the-barnstormer/the-barnstormer-gallery00.jpg",
+  ),
+  "mk-dumbo": disneyMedia(
+    "attractions/magic-kingdom/dumbo-the-flying-elephant/dumbo-the-flying-elephant-gallery00.jpg",
+  ),
+  "mk-tea-party": disneyMedia(
+    "attractions/magic-kingdom/mad-tea-party/mad-tea-party-gallery00.jpg",
+  ),
+  "mk-philharmagic": disneyMedia(
+    "attractions/magic-kingdom/mickeys-philharmagic/mickeys-philharmagic-gallery00.jpg",
+  ),
+  "mk-carousel": disneyMedia(
+    "attractions/magic-kingdom/prince-charming-regal-carrousel/prince-charming-regal-carrousel-gallery00.jpg",
+  ),
+  "mk-belle": disneyMedia(
+    "attractions/magic-kingdom/enchanted-tales-with-belle/enchanted-tales-with-belle-gallery00.jpg",
+  ),
+  "mk-haunted": disneyMedia(
+    "attractions/magic-kingdom/haunted-mansion/haunted-mansion-gallery00.jpg",
+  ),
+  "mk-riverboat": disneyMedia(
+    "attractions/magic-kingdom/liberty-square-riverboat/liberty-square-riverboat-gallery00.jpg",
+  ),
+  "mk-presidents": disneyMedia(
+    "attractions/magic-kingdom/hall-of-presidents/hall-of-presidents-gallery00.jpg",
+  ),
+  "mk-thunder": disneyMedia(
+    "attractions/magic-kingdom/big-thunder-mountain-railroad/big-thunder-mountain-railroad-gallery00.jpg",
+  ),
+  "mk-tiana": disneyMedia(
+    "attractions/magic-kingdom/tianas-bayou-adventure/tianas-bayou-adventure-gallery00.jpg",
+  ),
+  "mk-country-bears": disneyMedia(
+    "attractions/magic-kingdom/country-bear-jamboree/country-bear-jamboree-gallery00.jpg",
+  ),
+  "mk-pirates": disneyMedia(
+    "attractions/magic-kingdom/pirates-of-the-caribbean/pirates-of-the-caribbean-gallery00.jpg",
+  ),
+  "mk-jungle": disneyMedia(
+    "attractions/magic-kingdom/jungle-cruise/jungle-cruise-gallery00.jpg",
+  ),
+  "mk-aladdin": disneyMedia(
+    "attractions/magic-kingdom/magic-carpets-of-aladdin/magic-carpets-of-aladdin-gallery00.jpg",
+  ),
+  "mk-tiki": disneyMedia(
+    "attractions/magic-kingdom/enchanted-tiki-room/enchanted-tiki-room-gallery00.jpg",
+  ),
+  "mk-treehouse": disneyMedia(
+    "attractions/magic-kingdom/swiss-family-treehouse/swiss-family-treehouse-gallery00.jpg",
+  ),
+  "mk-railroad": disneyMedia(
+    "attractions/magic-kingdom/walt-disney-world-railroad-fantasyland/walt-disney-world-railroad-fantasyland-gallery00.jpg",
+  ),
+  "mk-festival": disneyMedia(
+    "entertainment/magic-kingdom/festival-of-fantasy-parade/festival-of-fantasy-parade-gallery00.jpg",
+  ),
+  "mk-buzz": disneyMedia(
+    "attractions/magic-kingdom/buzz-lightyears-space-ranger-spin/buzz-lightyears-space-ranger-spin-gallery00.jpg",
+  ),
+  "mk-monsters": disneyMedia(
+    "attractions/magic-kingdom/monsters-inc-laugh-floor/monsters-inc-laugh-floor-gallery02.jpg",
+  ),
+  "mk-speedway": disneyMedia(
+    "attractions/magic-kingdom/tomorrowland-speedway/tomorrowland-speedway-gallery00.jpg",
+  ),
+  "mk-astro-orbiter": disneyMedia(
+    "attractions/magic-kingdom/astro-orbiter/astro-orbiter-gallery00.jpg",
+  ),
+  "mk-peoplemover": disneyMedia(
+    "attractions/magic-kingdom/tomorrowland-transit-authority-peoplemover/tomorrowland-transit-authority-peoplemover-gallery00.jpg",
+  ),
+  "mk-carousel-progress": disneyMedia(
+    "attractions/magic-kingdom/walt-disneys-carousel-of-progress/walt-disneys-carousel-of-progress-gallery00.jpg",
+  ),
+  "mk-hea": disneyMedia(
+    "entertainment/magic-kingdom/happily-ever-after/happily-ever-after-gallery00.jpg",
+  ),
 
   // EPCOT
   "ep-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Spaceship_Earth.jpg/1280px-Spaceship_Earth.jpg",
@@ -139,5 +209,43 @@ export const parkImages: Record<string, string> = {
   "eu-curse": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Curse_of_the_Werewolf.jpg/1280px-Curse_of_the_Werewolf.jpg",
   "eu-constellation": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/UEU_Entrance.jpg/1280px-UEU_Entrance.jpg",
   "eu-berk-show": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
+};
+
+/** High-res fallback images from Wikimedia Commons */
+export const parkFallbackImages: Record<string, string> = {
+  "mk-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Cinderella_Castle.jpg/1280px-Cinderella_Castle.jpg",
+  "mk-tron": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Tron_Lightcycle_Run.jpg",
+  "mk-space": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Magic_Kingdom_Space_Mountain.jpg/1280px-Magic_Kingdom_Space_Mountain.jpg",
+  "mk-mine": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Seven_Dwarfs_Mine_Train.jpg/1280px-Seven_Dwarfs_Mine_Train.jpg",
+  "mk-peter": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_Pan%27s_Flight_%2834399881866%29.jpg/1280px-Peter_Pan%27s_Flight_%2834399881866%29.jpg",
+  "mk-pooh": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Many_Adventures_of_Winnie_the_Pooh_at_Walt_Disney_World_01.jpg/1280px-The_Many_Adventures_of_Winnie_the_Pooh_at_Walt_Disney_World_01.jpg",
+  "mk-small-world": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/It%27s_a_Small_World_%2840919313264%29.jpg/1280px-It%27s_a_Small_World_%2840919313264%29.jpg",
+  "mk-little-mermaid": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Under_the_Sea_%2842591053734%29.jpg/1280px-Under_the_Sea_%2842591053734%29.jpg",
+  "mk-barnstormer": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/The_Barnstormer_%2816480749069%29.jpg/1280px-The_Barnstormer_%2816480749069%29.jpg",
+  "mk-dumbo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dumbo_the_Flying_Elephant_%2834399859596%29.jpg/1280px-Dumbo_the_Flying_Elephant_%2834399859596%29.jpg",
+  "mk-tea-party": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mad_Tea_Party_%2816665793091%29.jpg/1280px-Mad_Tea_Party_%2816665793091%29.jpg",
+  "mk-philharmagic": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Mickey%27s_PhilharMagic_%2835200388276%29.jpg/1280px-Mickey%27s_PhilharMagic_%2835200388276%29.jpg",
+  "mk-carousel": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Prince_Charming_Regal_Carrousel_%2834438965663%29.jpg/1280px-Prince_Charming_Regal_Carrousel_%2834438965663%29.jpg",
+  "mk-belle": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Enchanted_Tales_with_Belle_%288730997194%29.jpg/1280px-Enchanted_Tales_with_Belle_%288730997194%29.jpg",
+  "mk-haunted": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/The_Haunted_Mansion.jpg/1280px-The_Haunted_Mansion.jpg",
+  "mk-riverboat": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Liberty_Belle_Riverboat_%2835240989075%29.jpg/1280px-Liberty_Belle_Riverboat_%2835240989075%29.jpg",
+  "mk-presidents": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/The_Hall_of_Presidents_%2834399757966%29.jpg/1280px-The_Hall_of_Presidents_%2834399757966%29.jpg",
+  "mk-thunder": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Big_Thunder_Mountain_Railroad_2.jpg/1280px-Big_Thunder_Mountain_Railroad_2.jpg",
+  "mk-tiana": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tiana%27s_Bayou_Adventure_%28Magic_Kingdom%29_1.jpg/1280px-Tiana%27s_Bayou_Adventure_%28Magic_Kingdom%29_1.jpg",
+  "mk-country-bears": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Country_Bear_Jamboree_%2834438947653%29.jpg/1280px-Country_Bear_Jamboree_%2834438947653%29.jpg",
+  "mk-pirates": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Adventureland_at_Magic_Kingdom.jpg/1280px-Adventureland_at_Magic_Kingdom.jpg",
+  "mk-jungle": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Jungle_Cruise.jpg/1280px-Jungle_Cruise.jpg",
+  "mk-aladdin": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/The_Magic_Carpets_of_Aladdin_%2834438927063%29.jpg/1280px-The_Magic_Carpets_of_Aladdin_%2834438927063%29.jpg",
+  "mk-tiki": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Walt_Disney%27s_Enchanted_Tiki_Room_%2835200346386%29.jpg/1280px-Walt_Disney%27s_Enchanted_Tiki_Room_%2835200346386%29.jpg",
+  "mk-treehouse": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Swiss_Family_Treehouse_%2834399723226%29.jpg/1280px-Swiss_Family_Treehouse_%2834399723226%29.jpg",
+  "mk-railroad": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Walt_Disney_World_Railroad_%2834438902503%29.jpg/1280px-Walt_Disney_World_Railroad_%2834438902503%29.jpg",
+  "mk-festival": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Princess_Garden%2C_Festival_of_Fantasy_Parade_%2816398355087%29.jpg/1280px-Princess_Garden%2C_Festival_of_Fantasy_Parade_%2816398355087%29.jpg",
+  "mk-buzz": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Buzz_Lightyear%27s_Space_Ranger_Spin.jpg/1280px-Buzz_Lightyear%27s_Space_Ranger_Spin.jpg",
+  "mk-monsters": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Monsters%2C_Inc._Laugh_Floor_%2835240957595%29.jpg/1280px-Monsters%2C_Inc._Laugh_Floor_%2835240957595%29.jpg",
+  "mk-speedway": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Tomorrowland_Speedway_%2834399694466%29.jpg/1280px-Tomorrowland_Speedway_%2834399694466%29.jpg",
+  "mk-astro-orbiter": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Astro_Orbiter_%2834399684696%29.jpg/1280px-Astro_Orbiter_%2834399684696%29.jpg",
+  "mk-peoplemover": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wdw-peoplemover.jpg/1280px-Wdw-peoplemover.jpg",
+  "mk-carousel-progress": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg/1280px-Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg",
+  "mk-hea": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Fireworks_in_Magic_Kingdom.jpg/1280px-Fireworks_in_Magic_Kingdom.jpg",
 };
 

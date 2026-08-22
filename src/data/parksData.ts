@@ -1,4 +1,4 @@
-import { parkImages } from "./parkImages";
+import { parkImages, parkFallbackImages } from "./parkImages";
 
 export interface Attraction {
   id: string;
@@ -22,6 +22,7 @@ export interface Attraction {
   waitTimeMin: number;
   durationMin: number;
   imageUrl: string;
+  fallbackUrl?: string;
   order: number;
 }
 
@@ -55,6 +56,7 @@ export const parks: Park[] = [
         waitTimeMin: 75,
         durationMin: 2,
         imageUrl: parkImages["mk-tron"],
+        fallbackUrl: parkFallbackImages["mk-tron"],
         order: 1,
       },
       {
@@ -68,6 +70,7 @@ export const parks: Park[] = [
         waitTimeMin: 55,
         durationMin: 3,
         imageUrl: parkImages["mk-space"],
+        fallbackUrl: parkFallbackImages["mk-space"],
         order: 2,
       },
       {
@@ -81,6 +84,7 @@ export const parks: Park[] = [
         waitTimeMin: 70,
         durationMin: 3,
         imageUrl: parkImages["mk-mine"],
+        fallbackUrl: parkFallbackImages["mk-mine"],
         order: 3,
       },
       {
@@ -94,6 +98,7 @@ export const parks: Park[] = [
         waitTimeMin: 60,
         durationMin: 3,
         imageUrl: parkImages["mk-peter"],
+        fallbackUrl: parkFallbackImages["mk-peter"],
         order: 4,
       },
       {
@@ -107,6 +112,7 @@ export const parks: Park[] = [
         waitTimeMin: 30,
         durationMin: 4,
         imageUrl: parkImages["mk-pooh"],
+        fallbackUrl: parkFallbackImages["mk-pooh"],
         order: 5,
       },
       {
@@ -120,6 +126,7 @@ export const parks: Park[] = [
         waitTimeMin: 25,
         durationMin: 14,
         imageUrl: parkImages["mk-small-world"],
+        fallbackUrl: parkFallbackImages["mk-small-world"],
         order: 6,
       },
       {
@@ -133,6 +140,7 @@ export const parks: Park[] = [
         waitTimeMin: 25,
         durationMin: 7,
         imageUrl: parkImages["mk-little-mermaid"],
+        fallbackUrl: parkFallbackImages["mk-little-mermaid"],
         order: 7,
       },
       {
@@ -146,6 +154,7 @@ export const parks: Park[] = [
         waitTimeMin: 25,
         durationMin: 1,
         imageUrl: parkImages["mk-barnstormer"],
+        fallbackUrl: parkFallbackImages["mk-barnstormer"],
         order: 8,
       },
       {
@@ -159,6 +168,7 @@ export const parks: Park[] = [
         waitTimeMin: 25,
         durationMin: 2,
         imageUrl: parkImages["mk-dumbo"],
+        fallbackUrl: parkFallbackImages["mk-dumbo"],
         order: 9,
       },
       {
@@ -172,6 +182,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 2,
         imageUrl: parkImages["mk-tea-party"],
+        fallbackUrl: parkFallbackImages["mk-tea-party"],
         order: 10,
       },
       {
@@ -185,6 +196,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 12,
         imageUrl: parkImages["mk-philharmagic"],
+        fallbackUrl: parkFallbackImages["mk-philharmagic"],
         order: 11,
       },
       {
@@ -198,6 +210,7 @@ export const parks: Park[] = [
         waitTimeMin: 10,
         durationMin: 2,
         imageUrl: parkImages["mk-carousel"],
+        fallbackUrl: parkFallbackImages["mk-carousel"],
         order: 12,
       },
       {
@@ -211,6 +224,7 @@ export const parks: Park[] = [
         waitTimeMin: 30,
         durationMin: 20,
         imageUrl: parkImages["mk-belle"],
+        fallbackUrl: parkFallbackImages["mk-belle"],
         order: 13,
       },
       {
@@ -224,6 +238,7 @@ export const parks: Park[] = [
         waitTimeMin: 40,
         durationMin: 8,
         imageUrl: parkImages["mk-haunted"],
+        fallbackUrl: parkFallbackImages["mk-haunted"],
         order: 14,
       },
       {
@@ -237,6 +252,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 17,
         imageUrl: parkImages["mk-riverboat"],
+        fallbackUrl: parkFallbackImages["mk-riverboat"],
         order: 15,
       },
       {
@@ -250,6 +266,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 25,
         imageUrl: parkImages["mk-presidents"],
+        fallbackUrl: parkFallbackImages["mk-presidents"],
         order: 16,
       },
       {
@@ -263,6 +280,7 @@ export const parks: Park[] = [
         waitTimeMin: 45,
         durationMin: 4,
         imageUrl: parkImages["mk-thunder"],
+        fallbackUrl: parkFallbackImages["mk-thunder"],
         order: 17,
       },
       {
@@ -276,6 +294,7 @@ export const parks: Park[] = [
         waitTimeMin: 50,
         durationMin: 10,
         imageUrl: parkImages["mk-tiana"],
+        fallbackUrl: parkFallbackImages["mk-tiana"],
         order: 18,
       },
       {
@@ -289,6 +308,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 12,
         imageUrl: parkImages["mk-country-bears"],
+        fallbackUrl: parkFallbackImages["mk-country-bears"],
         order: 19,
       },
       {
@@ -302,6 +322,7 @@ export const parks: Park[] = [
         waitTimeMin: 35,
         durationMin: 9,
         imageUrl: parkImages["mk-pirates"],
+        fallbackUrl: parkFallbackImages["mk-pirates"],
         order: 20,
       },
       {
@@ -315,6 +336,7 @@ export const parks: Park[] = [
         waitTimeMin: 40,
         durationMin: 10,
         imageUrl: parkImages["mk-jungle"],
+        fallbackUrl: parkFallbackImages["mk-jungle"],
         order: 21,
       },
       {
@@ -328,6 +350,7 @@ export const parks: Park[] = [
         waitTimeMin: 20,
         durationMin: 2,
         imageUrl: parkImages["mk-aladdin"],
+        fallbackUrl: parkFallbackImages["mk-aladdin"],
         order: 22,
       },
       {
@@ -341,6 +364,7 @@ export const parks: Park[] = [
         waitTimeMin: 10,
         durationMin: 15,
         imageUrl: parkImages["mk-tiki"],
+        fallbackUrl: parkFallbackImages["mk-tiki"],
         order: 23,
       },
       {
@@ -354,6 +378,7 @@ export const parks: Park[] = [
         waitTimeMin: 5,
         durationMin: 15,
         imageUrl: parkImages["mk-treehouse"],
+        fallbackUrl: parkFallbackImages["mk-treehouse"],
         order: 24,
       },
       {
@@ -367,6 +392,7 @@ export const parks: Park[] = [
         waitTimeMin: 10,
         durationMin: 20,
         imageUrl: parkImages["mk-railroad"],
+        fallbackUrl: parkFallbackImages["mk-railroad"],
         order: 25,
       },
       {
@@ -380,6 +406,7 @@ export const parks: Park[] = [
         waitTimeMin: 0,
         durationMin: 15,
         imageUrl: parkImages["mk-festival"],
+        fallbackUrl: parkFallbackImages["mk-festival"],
         order: 26,
       },
       {
@@ -393,6 +420,7 @@ export const parks: Park[] = [
         waitTimeMin: 30,
         durationMin: 5,
         imageUrl: parkImages["mk-buzz"],
+        fallbackUrl: parkFallbackImages["mk-buzz"],
         order: 27,
       },
       {
@@ -406,6 +434,7 @@ export const parks: Park[] = [
         waitTimeMin: 15,
         durationMin: 15,
         imageUrl: parkImages["mk-monsters"],
+        fallbackUrl: parkFallbackImages["mk-monsters"],
         order: 28,
       },
       {
@@ -419,6 +448,7 @@ export const parks: Park[] = [
         waitTimeMin: 25,
         durationMin: 5,
         imageUrl: parkImages["mk-speedway"],
+        fallbackUrl: parkFallbackImages["mk-speedway"],
         order: 29,
       },
       {
@@ -432,6 +462,7 @@ export const parks: Park[] = [
         waitTimeMin: 30,
         durationMin: 2,
         imageUrl: parkImages["mk-astro-orbiter"],
+        fallbackUrl: parkFallbackImages["mk-astro-orbiter"],
         order: 30,
       },
       {
@@ -445,6 +476,7 @@ export const parks: Park[] = [
         waitTimeMin: 10,
         durationMin: 10,
         imageUrl: parkImages["mk-peoplemover"],
+        fallbackUrl: parkFallbackImages["mk-peoplemover"],
         order: 31,
       },
       {
@@ -458,6 +490,7 @@ export const parks: Park[] = [
         waitTimeMin: 10,
         durationMin: 21,
         imageUrl: parkImages["mk-carousel-progress"],
+        fallbackUrl: parkFallbackImages["mk-carousel-progress"],
         order: 32,
       },
       {
@@ -471,6 +504,7 @@ export const parks: Park[] = [
         waitTimeMin: 0,
         durationMin: 18,
         imageUrl: parkImages["mk-hea"],
+        fallbackUrl: parkFallbackImages["mk-hea"],
         order: 33,
       },
     ],
