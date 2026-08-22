@@ -45,6 +45,10 @@ function typeAccent(type: Attraction["type"]) {
       return "text-amber-700 bg-amber-500/10";
     case "Interactivo":
       return "text-teal bg-teal/10";
+    case "Carrusel":
+      return "text-pink-600 bg-pink-500/10";
+    case "Paseo":
+      return "text-indigo-600 bg-indigo-500/10";
     default:
       return "text-slate-600 bg-slate-500/10";
   }
@@ -218,12 +222,12 @@ export function ParkDetailView({ park }: { park: Park }) {
                       </span>
                     </div>
 
-                    <div className="grid gap-4 p-4 sm:grid-cols-[140px_1fr] sm:gap-5 sm:p-5 md:grid-cols-[160px_1fr]">
-                      <div className="relative mx-auto aspect-[3/2] w-full max-w-[200px] overflow-hidden rounded-lg shadow-sm sm:mx-0 sm:h-20 sm:w-[120px] sm:max-w-none sm:aspect-auto">
+                    <div className="grid gap-4 p-4 sm:grid-cols-[150px_1fr] sm:gap-5 sm:p-5 md:grid-cols-[180px_1fr]">
+                      <div className="relative mx-auto aspect-[16/10] w-full max-w-[280px] overflow-hidden rounded-xl shadow-sm sm:mx-0 sm:h-32 sm:w-[150px] sm:max-w-none md:w-[180px]">
                         <AttractionImage
                           src={attraction.imageUrl}
                           alt={attraction.name}
-                          sizes="(max-width: 640px) 200px, 120px"
+                          sizes="(max-width: 640px) 280px, 180px"
                         />
                       </div>
 
