@@ -44,8 +44,10 @@ export const parkImages: Record<string, string> = {
   "ep-soarin": "/images/parks/epcot/ep-soarin.jpg",
   "ep-test": "/images/parks/epcot/ep-test.jpg",
   "ep-mission": "/images/parks/epcot/ep-mission.jpg",
+  "ep-figment": "/images/parks/epcot/ep-figment.jpg",
   "ep-living": "/images/parks/epcot/ep-living.jpg",
   "ep-seas": "/images/parks/epcot/ep-seas.jpg",
+  "ep-seabase": "/images/parks/epcot/ep-seabase.jpg",
   "ep-turtle": "/images/parks/epcot/ep-turtle.jpg",
   "ep-moana": "/images/parks/epcot/ep-moana.jpg",
   "ep-spaceship": "/images/parks/epcot/ep-spaceship.jpg",
@@ -57,6 +59,7 @@ export const parkImages: Record<string, string> = {
   "ep-pixar": "/images/parks/epcot/ep-pixar.jpg",
   "ep-awesome": "/images/parks/epcot/ep-awesome.jpg",
   "ep-clubcool": "/images/parks/epcot/ep-clubcool.jpg",
+  "ep-kidcot": "/images/parks/epcot/ep-kidcot.jpg",
   "ep-luminous": "/images/parks/epcot/ep-luminous.jpg",
 
   // Hollywood Studios (Official Disney World Photos)
@@ -75,7 +78,9 @@ export const parkImages: Record<string, string> = {
   "hs-beauty-show": "/images/parks/hollywood-studios/hs-beauty-show.jpg",
   "hs-muppets": "/images/parks/hollywood-studios/hs-muppets.jpg",
   "hs-disney-junior": "/images/parks/hollywood-studios/hs-disney-junior.jpg",
+  "hs-launch-bay": "/images/parks/hollywood-studios/hs-launch-bay.jpg",
   "hs-walt-presents": "/images/parks/hollywood-studios/hs-walt-presents.jpg",
+  "hs-projections": "/images/parks/hollywood-studios/hs-projections.jpg",
   "hs-fantasmic": "/images/parks/hollywood-studios/hs-fantasmic.jpg",
 
   // Animal Kingdom (Official Disney World Photos)
@@ -92,11 +97,14 @@ export const parkImages: Record<string, string> = {
   "ak-gorilla": "/images/parks/animal-kingdom/ak-gorilla.jpg",
   "ak-maharajah": "/images/parks/animal-kingdom/ak-maharajah.jpg",
   "ak-it-tough": "/images/parks/animal-kingdom/ak-it-tough.jpg",
+  "ak-tree-awakenings": "/images/parks/animal-kingdom/ak-tree-awakenings.jpg",
+  "ak-wilderness": "/images/parks/animal-kingdom/ak-wilderness.jpg",
+  "ak-character-outpost": "/images/parks/animal-kingdom/ak-character-outpost.jpg",
   "ak-triceratop": "/images/parks/animal-kingdom/ak-triceratop.jpg",
   "ak-boneyard": "/images/parks/animal-kingdom/ak-boneyard.jpg",
   "ak-train": "/images/parks/animal-kingdom/ak-train.jpg",
   "ak-planet-watch": "/images/parks/animal-kingdom/ak-planet-watch.jpg",
-  "ak-character-outpost": "/images/parks/animal-kingdom/ak-character-outpost.jpg",
+  "ak-affection": "/images/parks/animal-kingdom/ak-affection.jpg",
 
   // Universal Studios Florida
   "us-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Universal_Studios_Florida.jpg/1280px-Universal_Studios_Florida.jpg",
