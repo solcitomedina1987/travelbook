@@ -17,7 +17,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "EEUU2027 - Travel Portal",
   description:
-    "Landing del viaje EEUU 2027: Nueva York, Orlando (Disney & Universal) y Miami. 13 de Abril al 04 de Mayo de 2027.",
+    "Landing del viaje EEUU 2027: Nueva York, Orlando (Disney & Universal) y Miami. 13 de Abril al 05 de Mayo de 2027.",
 };
 
 export default function RootLayout({
