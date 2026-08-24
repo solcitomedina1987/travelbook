@@ -1,6 +1,6 @@
 /** Official Disney World & Universal high-resolution photos */
 export const parkImages: Record<string, string> = {
-  // Magic Kingdom (Official Disney World Photos)
+  // Magic Kingdom (Official Disney World Local Photos)
   "mk-hero": "/images/parks/magic-kingdom/mk-hero.jpg",
   "mk-tron": "/images/parks/magic-kingdom/mk-tron.jpg",
   "mk-space": "/images/parks/magic-kingdom/mk-space.jpg",
@@ -36,7 +36,7 @@ export const parkImages: Record<string, string> = {
   "mk-carousel-progress": "/images/parks/magic-kingdom/mk-carousel-progress.jpg",
   "mk-hea": "/images/parks/magic-kingdom/mk-hea.jpg",
 
-  // EPCOT (Official Disney World Photos)
+  // EPCOT (Official Disney World Local Photos)
   "ep-hero": "/images/parks/epcot/ep-hero.jpg",
   "ep-guardians": "/images/parks/epcot/ep-guardians.jpg",
   "ep-remy": "/images/parks/epcot/ep-remy.jpg",
@@ -76,7 +76,7 @@ export const parkImages: Record<string, string> = {
   "ep-jammitors": "/images/parks/epcot/ep-jammitors.jpg",
   "ep-luminous": "/images/parks/epcot/ep-luminous.jpg",
 
-  // Hollywood Studios (Official Disney World Photos - Full 37 Attractions)
+  // Hollywood Studios (Official Disney World Local Photos)
   "hs-hero": "/images/parks/hollywood-studios/hs-hero.jpg",
   "hs-rise": "/images/parks/hollywood-studios/hs-rise.jpg",
   "hs-smugglers": "/images/parks/hollywood-studios/hs-smugglers.jpg",
@@ -114,7 +114,7 @@ export const parkImages: Record<string, string> = {
   "hs-sunset-greetings": "/images/parks/hollywood-studios/hs-sunset-greetings.jpg",
   "hs-animation-experience": "/images/parks/hollywood-studios/hs-animation-experience.jpg",
 
-  // Animal Kingdom (Official Disney World Photos)
+  // Animal Kingdom (Official Disney World Local Photos)
   "ak-hero": "/images/parks/animal-kingdom/ak-hero.jpg",
   "ak-avatar": "/images/parks/animal-kingdom/ak-avatar.jpg",
   "ak-navi": "/images/parks/animal-kingdom/ak-navi.jpg",
@@ -149,61 +149,50 @@ export const parkImages: Record<string, string> = {
   // Universal Studios Florida
   "us-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Universal_Studios_Florida.jpg/1280px-Universal_Studios_Florida.jpg",
   "us-gringotts": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dragon_breathing_fire_in_Diagon_ALley.jpg/1280px-Dragon_breathing_fire_in_Diagon_ALley.jpg",
-  "us-express": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Orlando-hogwarts-express-kings-cross-station.jpg/1280px-Orlando-hogwarts-express-kings-cross-station.jpg",
-  "us-mummy": "https://upload.wikimedia.org/wikipedia/commons/8/8b/UniversalStudiosRevengeOfTheMummyEntrance.jpg",
+  "us-mummy": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/UniversalStudiosRevengeOfTheMummyEntrance.jpg/1280px-UniversalStudiosRevengeOfTheMummyEntrance.jpg",
+  "us-bourne": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/HorrorMakeUpEnt.JPG/1280px-HorrorMakeUpEnt.JPG",
+  "us-et": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Universal_Studios_Florida_entrance_arch.jpg/1280px-Universal_Studios_Florida_entrance_arch.jpg",
+  "us-mib": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Men_in_Black_Single_Rider_Line.jpg/1280px-Men_in_Black_Single_Rider_Line.jpg",
+  "us-rockit": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hollywood_Rip_Ride_Rockit_01.jpg/1280px-Hollywood_Rip_Ride_Rockit_01.jpg",
   "us-transformers": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/New_Transformers_Ride_-_panoramio.jpg/1280px-New_Transformers_Ride_-_panoramio.jpg",
   "us-minions": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Atracci%C3%B3n_Mi_Villano_Favorito.JPG/1280px-Atracci%C3%B3n_Mi_Villano_Favorito.JPG",
+  "us-hogwarts-express": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Orlando-hogwarts-express-kings-cross-station.jpg/1280px-Orlando-hogwarts-express-kings-cross-station.jpg",
   "us-villain": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Minion_Land.jpg/1280px-Minion_Land.jpg",
-  "us-mib": "https://upload.wikimedia.org/wikipedia/commons/7/72/Men_in_Black_Single_Rider_Line.jpg",
   "us-horror": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/HorrorMakeUpEnt.JPG/1280px-HorrorMakeUpEnt.JPG",
   "us-jimmy": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Universal_Studios_Florida.jpg/1280px-Universal_Studios_Florida.jpg",
-  "us-et": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Atracci%C3%B3n_Mi_Villano_Favorito.JPG/1280px-Atracci%C3%B3n_Mi_Villano_Favorito.JPG",
-  "us-bourne": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/HorrorMakeUpEnt.JPG/1280px-HorrorMakeUpEnt.JPG",
-  "us-night": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dragon_breathing_fire_in_Diagon_ALley.jpg/1280px-Dragon_breathing_fire_in_Diagon_ALley.jpg",
-  "us-forbidden": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dragon_breathing_fire_in_Diagon_ALley.jpg/1280px-Dragon_breathing_fire_in_Diagon_ALley.jpg",
-  "us-hogwarts-express": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Orlando-hogwarts-express-kings-cross-station.jpg/1280px-Orlando-hogwarts-express-kings-cross-station.jpg",
-  "us-men": "https://upload.wikimedia.org/wikipedia/commons/7/72/Men_in_Black_Single_Rider_Line.jpg",
-  "us-bournes": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/HorrorMakeUpEnt.JPG/1280px-HorrorMakeUpEnt.JPG",
 
   // Islands of Adventure
-  "ioa-hero": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Incredible_Hulk_Coaster.jpg",
+  "ioa-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Incredible_Hulk_Coaster.jpg/1280px-Incredible_Hulk_Coaster.jpg",
   "ioa-hagrid": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hagrid%27s_Magical_Creatures_Motorbike_Adventure_2.jpg/1280px-Hagrid%27s_Magical_Creatures_Motorbike_Adventure_2.jpg",
   "ioa-veloci": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/VelociCoaster_2.jpg/1280px-VelociCoaster_2.jpg",
-  "ioa-hulk": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Incredible_Hulk_Coaster.jpg",
-  "ioa-forbidden": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Wizarding_World_of_Harry_Potter_Castle.jpg",
-  "ioa-hippogriff": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flight_of_the_Hippogriff_at_Islands_of_Adventure.jpg",
+  "ioa-forbidden": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wizarding_World_of_Harry_Potter_Castle.jpg/1280px-Wizarding_World_of_Harry_Potter_Castle.jpg",
   "ioa-spiderman": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Amazing_Adventures_of_Spider-Man_%28Universal%27s_Islands_of_Adventure%29_1.jpg/1280px-The_Amazing_Adventures_of_Spider-Man_%28Universal%27s_Islands_of_Adventure%29_1.jpg",
-  "ioa-doom": "https://upload.wikimedia.org/wikipedia/commons/8/82/Marvel_Super_Hero_Island_23.jpg",
+  "ioa-hulk": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Incredible_Hulk_Coaster.jpg/1280px-Incredible_Hulk_Coaster.jpg",
+  "ioa-jurassic": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jurassic_Park_River_Adventure_%2821430043132%29.jpg/1280px-Jurassic_Park_River_Adventure_%2821430043132%29.jpg",
+  "ioa-kong": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Skull_Island_Reign_of_Kong.jpg/1280px-Skull_Island_Reign_of_Kong.jpg",
   "ioa-popeye": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Popeye_and_Blutos_Bilge-Rat_Barges_01.jpg/1280px-Popeye_and_Blutos_Bilge-Rat_Barges_01.jpg",
+  "ioa-ripsaw": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Dudley_Do-Right%27s_Ripsaw_Falls_%2821252994640%29.jpg/1280px-Dudley_Do-Right%27s_Ripsaw_Falls_%2821252994640%29.jpg",
+  "ioa-hippogriff": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Flight_of_the_Hippogriff_at_Islands_of_Adventure.jpg/1280px-Flight_of_the_Hippogriff_at_Islands_of_Adventure.jpg",
+  "ioa-doom": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Marvel_Super_Hero_Island_23.jpg/1280px-Marvel_Super_Hero_Island_23.jpg",
   "ioa-poseidon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Poseidon%27sFury.JPG/1280px-Poseidon%27sFury.JPG",
-  "ioa-night": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hogwarts_Express_at_Islands_of_Adventure_by_night.jpg/1280px-Hogwarts_Express_at_Islands_of_Adventure_by_night.jpg",
-  "ioa-cat": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flight_of_the_Hippogriff_at_Islands_of_Adventure.jpg",
-  "ioa-jurassic": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/VelociCoaster_2.jpg/1280px-VelociCoaster_2.jpg",
-  "ioa-mythos-show": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Poseidon%27sFury.JPG/1280px-Poseidon%27sFury.JPG",
 
   // Epic Universe
   "eu-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/UEU_Entrance.jpg/1280px-UEU_Entrance.jpg",
-  "eu-mario": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
-  "eu-yoshi": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
   "eu-stardust": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Stardust_Racers_in_twilight.jpg/1280px-Stardust_Racers_in_twilight.jpg",
   "eu-ministry": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dragon_breathing_fire_in_Diagon_ALley.jpg/1280px-Dragon_breathing_fire_in_Diagon_ALley.jpg",
+  "eu-monsters": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Curse_of_the_Werewolf.jpg/1280px-Curse_of_the_Werewolf.jpg",
+  "eu-minecart": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
+  "eu-mario-kart": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mario_Kart_Koopa%27s_Challenge_%28Super_Nintendo_World%29.jpg/1280px-Mario_Kart_Koopa%27s_Challenge_%28Super_Nintendo_World%29.jpg",
   "eu-hiccup": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
   "eu-werewolf": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Curse_of_the_Werewolf.jpg/1280px-Curse_of_the_Werewolf.jpg",
+  "eu-dragon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
   "eu-carousel": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/UEU_Entrance.jpg/1280px-UEU_Entrance.jpg",
   "eu-show": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
-  "eu-night": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/UEU_Entrance.jpg/1280px-UEU_Entrance.jpg",
-  "eu-dragon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
-  "eu-minecart": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
-  "eu-monsters": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Curse_of_the_Werewolf.jpg/1280px-Curse_of_the_Werewolf.jpg",
-  "eu-mario-kart": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
-  "eu-mine-cart": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Super_Nintendo_World_%28Universal_Studios_Japan%29.png/1280px-Super_Nintendo_World_%28Universal_Studios_Japan%29.png",
-  "eu-curse": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Curse_of_the_Werewolf.jpg/1280px-Curse_of_the_Werewolf.jpg",
-  "eu-constellation": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/UEU_Entrance.jpg/1280px-UEU_Entrance.jpg",
-  "eu-berk-show": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Celestial_Park.jpg/1280px-Celestial_Park.jpg",
 };
 
 /** High-res fallback images from Wikimedia Commons */
 export const parkFallbackImages: Record<string, string> = {
+  // Magic Kingdom Fallbacks
   "mk-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Cinderella_Castle.jpg/1280px-Cinderella_Castle.jpg",
   "mk-tron": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Tron_Lightcycle_Run.jpg",
   "mk-space": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Magic_Kingdom_Space_Mountain.jpg/1280px-Magic_Kingdom_Space_Mountain.jpg",
@@ -238,5 +227,43 @@ export const parkFallbackImages: Record<string, string> = {
   "mk-peoplemover": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wdw-peoplemover.jpg/1280px-Wdw-peoplemover.jpg",
   "mk-carousel-progress": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg/1280px-Walt_Disney%27s_Carousel_of_Progress_%2834438865613%29.jpg",
   "mk-hea": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Fireworks_in_Magic_Kingdom.jpg/1280px-Fireworks_in_Magic_Kingdom.jpg",
-};
 
+  // EPCOT Fallbacks
+  "ep-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Epcot_Spaceship_Earth.jpg/1280px-Epcot_Spaceship_Earth.jpg",
+  "ep-guardians": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Guardians_of_the_Galaxy_Cosmic_Rewind.jpg/1280px-Guardians_of_the_Galaxy_Cosmic_Rewind.jpg",
+  "ep-remy": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Remy%27s_Ratatouille_Adventure.jpg/1280px-Remy%27s_Ratatouille_Adventure.jpg",
+  "ep-frozen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Frozen_Ever_After_%2849557454848%29.jpg/1280px-Frozen_Ever_After_%2849557454848%29.jpg",
+  "ep-soarin": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Soarin%27_Over_California_entrance.jpg/1280px-Soarin%27_Over_California_entrance.jpg",
+  "ep-test": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Test_Track_entrance.jpg/1280px-Test_Track_entrance.jpg",
+  "ep-mission": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Mission_SPACE.jpg/1280px-Mission_SPACE.jpg",
+  "ep-living": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Living_with_the_Land_boat.jpg/1280px-Living_with_the_Land_boat.jpg",
+  "ep-seas": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/The_Seas_with_Nemo_%26_Friends_exterior.jpg/1280px-The_Seas_with_Nemo_%26_Friends_exterior.jpg",
+  "ep-spaceship": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Epcot_Spaceship_Earth.jpg/1280px-Epcot_Spaceship_Earth.jpg",
+  "ep-mexico": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Mexico_Pavilion_at_Epcot.jpg/1280px-Mexico_Pavilion_at_Epcot.jpg",
+
+  // Hollywood Studios Fallbacks
+  "hs-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Disney%27s_Hollywood_Studios_entrance.jpg/1280px-Disney%27s_Hollywood_Studios_entrance.jpg",
+  "hs-rise": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Star_Wars_Rise_of_the_Resistance.jpg/1280px-Star_Wars_Rise_of_the_Resistance.jpg",
+  "hs-tower": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Twilight_Zone_Tower_of_Terror_at_Disney%27s_Hollywood_Studios.jpg/1280px-The_Twilight_Zone_Tower_of_Terror_at_Disney%27s_Hollywood_Studios.jpg",
+  "hs-slinky": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Slinky_Dog_Dash_2.jpg/1280px-Slinky_Dog_Dash_2.jpg",
+  "hs-mickey": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mickey_%26_Minnie%27s_Runaway_Railway_entrance.jpg/1280px-Mickey_%26_Minnie%27s_Runaway_Railway_entrance.jpg",
+  "hs-rockn": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock_%27n%27_Roller_Coaster_Starring_Aerosmith_entrance.jpg/1280px-Rock_%27n%27_Roller_Coaster_Starring_Aerosmith_entrance.jpg",
+  "hs-smugglers": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Millennium_Falcon_Smugglers_Run.jpg/1280px-Millennium_Falcon_Smugglers_Run.jpg",
+  "hs-mania": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Toy_Story_Midway_Mania_entrance_at_DHS.jpg/1280px-Toy_Story_Midway_Mania_entrance_at_DHS.jpg",
+  "hs-alien": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Alien_Swirling_Saucers.jpg/1280px-Alien_Swirling_Saucers.jpg",
+  "hs-indy": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Indiana_Jones_Epic_Stunt_Spectacular.jpg/1280px-Indiana_Jones_Epic_Stunt_Spectacular.jpg",
+  "hs-startours": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Star_Tours_The_Adventures_Continue_entrance.jpg/1280px-Star_Tours_The_Adventures_Continue_entrance.jpg",
+
+  // Animal Kingdom Fallbacks
+  "ak-hero": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/The_Tree_of_Life_at_Disney%27s_Animal_Kingdom.jpg/1280px-The_Tree_of_Life_at_Disney%27s_Animal_Kingdom.jpg",
+  "ak-avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Avatar_Flight_of_Passage_entrance.jpg/1280px-Avatar_Flight_of_Passage_entrance.jpg",
+  "ak-everest": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Expedition_Everest.jpg/1280px-Expedition_Everest.jpg",
+  "ak-safari": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kilimanjaro_Safaris_vehicle.jpg/1280px-Kilimanjaro_Safaris_vehicle.jpg",
+  "ak-navi": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Na%27vi_River_Journey_entrance.jpg/1280px-Na%27vi_River_Journey_entrance.jpg",
+  "ak-lion-king": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Festival_of_the_Lion_King_show.jpg/1280px-Festival_of_the_Lion_King_show.jpg",
+  "ak-kali": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Kali_River_Rapids_raft.jpg/1280px-Kali_River_Rapids_raft.jpg",
+  "ak-dinosaur": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/DINOSAUR_ride_entrance.jpg/1280px-DINOSAUR_ride_entrance.jpg",
+  "ak-nemo-show": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Finding_Nemo_The_Musical.jpg/1280px-Finding_Nemo_The_Musical.jpg",
+  "ak-it-tough": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/It%27s_Tough_to_be_a_Bug_entrance.jpg/1280px-It%27s_Tough_to_be_a_Bug_entrance.jpg",
+  "ak-gorilla": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Gorilla_Falls_Exploration_Trail.jpg/1280px-Gorilla_Falls_Exploration_Trail.jpg",
+};
